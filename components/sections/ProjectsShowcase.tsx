@@ -5,7 +5,21 @@ import { Rocket, ArrowRight, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 import StorySection from './StorySection'
 
-const projects = [
+type ColorKey = 'emerald' | 'cyan' | 'purple'
+
+interface Project {
+  id: string
+  title: string
+  company: string
+  metric: string
+  metricLabel: string
+  impact: string
+  color: ColorKey
+  tags: string[]
+  description: string
+}
+
+const projects: Project[] = [
   {
     id: 'voice-ai-hoymismo',
     title: 'Voice AI para Importación de Vehículos',
@@ -41,7 +55,7 @@ const projects = [
   }
 ]
 
-const colorStyles = {
+const colorStyles: Record<ColorKey, { border: string; text: string; bg: string }> = {
   emerald: {
     border: 'border-primary-500/20 hover:border-primary-500/50',
     text: 'text-primary-400',
