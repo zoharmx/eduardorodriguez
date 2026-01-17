@@ -32,7 +32,7 @@ const projects: Project[] = [
     description: 'Detecta desviaciones civilizatorias comparando modelos Occidentales vs Orientales. Arquitectura de observabilidad que monitorea sesgos en tiempo real.',
   },
   {
-    id: 'sofia-stripe',
+    id: 'vocalisai',
     title: 'VocalisAI - Voice Agent with Payments',
     company: 'Automated Sales',
     metric: 'Voice-to-Pay',
@@ -76,7 +76,7 @@ const projects: Project[] = [
     description: 'Orquesta Gemini, Mistral y DeepSeek para eliminar sesgos en la toma de decisiones corporativas críticas.',
   },
   {
-    id: 'hoymismo-dashboard',
+    id: 'enterprise-logistics',
     title: 'Enterprise Logistics OS',
     company: 'HoyMismo Paquetería',
     metric: 'All-in-One',
