@@ -76,26 +76,30 @@ export default function Home() {
         </div>
       </StorySection>
 
-      {/* Story Chapter 2: El Framework */}
+      {/* Story Chapter 2: Tikun Olam - El Proyecto */}
       <StorySection
         chapter={2}
         icon={<Code className="w-8 h-8" />}
         color="cyan"
-        title="Construí el Framework Tikún"
-        highlight="Framework Tikún"
+        title="Creé Tikun Olam: IA Ética Observable"
+        highlight="Tikun Olam"
       >
-        <p className="text-xl text-slate-300 leading-relaxed mb-8">
-          <span className="text-accent-cyan font-semibold">7 años</span> de investigación, 
-          desarrollo y validación. No es solo código, es una filosofía.
+        <p className="text-xl text-slate-300 leading-relaxed mb-4">
+          La primera pipeline de IA ética con{' '}
+          <span className="text-accent-cyan font-semibold">observabilidad total en Datadog</span>.
         </p>
+
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500/10 border border-primary-500/30 rounded-full text-primary-400 text-sm mb-8">
+          Google Cloud x Datadog Winner
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {[
-            { icon: '🌳', title: 'Árbol de Vida', desc: 'Estructura de decisiones basada en Sefirot' },
-            { icon: '⚖️', title: 'Balance Ético', desc: 'Sistema de pesos morales dinámicos' },
-            { icon: '🔄', title: 'Rectificación', desc: 'Aprendizaje y corrección continua' }
+            { icon: '🔍', title: 'Bias Detection', desc: '73% de sesgos detectados entre modelos Occidentales vs Orientales' },
+            { icon: '📊', title: 'Observability', desc: 'Monitoreo en tiempo real con Datadog y métricas BinahSigma' },
+            { icon: '🧠', title: 'Multi-Model', desc: 'Orquestación de Vertex AI para comparación civilizatoria' }
           ].map((item, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -110,22 +114,20 @@ export default function Home() {
         </div>
 
         <div className="p-6 bg-gradient-to-r from-accent-cyan/10 to-accent-blue/10 border border-accent-cyan/30 rounded-xl">
-          <div className="text-accent-cyan font-semibold mb-3">Resultados de Validación</div>
-          <div className="grid grid-cols-2 gap-4 text-sm">
-            <div>
-              <div className="text-2xl font-bold text-white">94%</div>
-              <div className="text-slate-400">Precisión en dilemas éticos complejos</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-white">100%</div>
-              <div className="text-slate-400">Consistencia en principios fundamentales</div>
-            </div>
+          <div className="text-accent-cyan font-semibold mb-3">Stack Tecnológico</div>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {['Python', 'Vertex AI', 'Datadog', 'BinahSigma', 'Google Cloud'].map((tech) => (
+              <span key={tech} className="px-3 py-1 bg-accent-cyan/10 text-accent-cyan text-xs rounded-full border border-accent-cyan/20">
+                {tech}
+              </span>
+            ))}
           </div>
-          <Link 
-            href="/case-studies/tikun-framework" 
-            className="inline-flex items-center gap-2 text-accent-cyan hover:gap-3 transition-all mt-4"
+          <Link
+            href="https://github.com/zoharmx/TikunOlam"
+            target="_blank"
+            className="inline-flex items-center gap-2 text-accent-cyan hover:gap-3 transition-all"
           >
-            Leer caso de estudio completo <ArrowRight className="w-4 h-4" />
+            Ver proyecto en GitHub <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </StorySection>

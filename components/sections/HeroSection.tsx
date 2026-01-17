@@ -56,34 +56,40 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-block mb-6 px-4 py-2 bg-primary-500/10 border border-primary-500/30 rounded-full text-primary-400 text-sm"
+          className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-primary-500/10 border border-primary-500/30 rounded-full text-primary-400 text-sm"
         >
-          ✨ Desarrollador Full-Stack • AI Specialist
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
+          </span>
+          AI Engineer • Systems Architect
         </motion.div>
-        
+
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 leading-tight"
         >
-          Desarrollo{' '}
+          Ingeniería de{' '}
           <span className="gradient-text">
-            Agentes de IA
+            IA Ética
           </span>
           <br />
-          que Trabajan 24/7
+          <span className="bg-gradient-to-r from-accent-cyan to-accent-blue bg-clip-text text-transparent">
+            & Misión Crítica
+          </span>
         </motion.h1>
-        
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto text-balance"
         >
-          Mientras tú duermes, mis Voice Agents atienden{' '}
-          <span className="text-primary-400 font-semibold">500+ llamadas/mes</span>,
-          cualifican leads y automatizan tu negocio
+          Desde <span className="text-white font-semibold">Agentes de Voz</span> que facturan autónomamente hasta{' '}
+          <span className="text-white font-semibold">Arquitecturas IoT</span> de alta escala.{' '}
+          Construyo tecnología <span className="text-primary-400 font-semibold">auditable y rentable</span>.
         </motion.p>
         
         <motion.div
