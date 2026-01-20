@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Space_Grotesk, JetBrains_Mono, Lexend } from 'next/font/google'
 import './globals.css'
+import VoiceAgentButton from '@/components/VoiceAgentButton'
 
 // Tipografía distintiva y moderna
 const spaceGrotesk = Space_Grotesk({ 
@@ -22,38 +23,38 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://eduardorodriguez.site'), // 
+  metadataBase: new URL('https://eduardorodriguez.site'),
   title: {
-    default: 'Eduardo Rodriguez Dev | Voice AI & Full-Stack Solutions',
-    template: '%s | Eduardo Rodriguez Dev'
+    default: 'Eduardo Rdz | Voice AI & Full-Stack Solutions',
+    template: '%s | Eduardo Rdz'
   },
-  description: 'Desarrollo agentes  de IA conversacionales que atienden 500+ llamadas/mes mientras duermes. Especializado en Voice AI, React y soluciones empresariales que transforman negocios.',
-  keywords: ['Voice AI', 'Full Stack Developer', 'React', 'Next.js', 'ElevenLabs', 'Gemini', 'Twilio', 'Firebase', 'AI Solutions', 'Importación Vehículos', 'Web Development', 'México'],
-  authors: [{ name: 'Eduardo Rodriguez Dev' }],
-  creator: 'Eduardo Rodriguez Dev',
-  publisher: 'Eduardo Rodriguez Dev',
+  description: 'I build conversational AI agents that handle 500+ calls/month while you sleep. Specialized in Voice AI, React, and enterprise solutions that transform businesses.',
+  keywords: ['Voice AI', 'Full Stack Developer', 'React', 'Next.js', 'ElevenLabs', 'Gemini', 'Twilio', 'Firebase', 'AI Solutions', 'Ethical AI', 'Tikun Olam', 'BinahSigma'],
+  authors: [{ name: 'Eduardo Rodriguez' }],
+  creator: 'Eduardo Rodriguez',
+  publisher: 'Eduardo Rodriguez',
   openGraph: {
     type: 'website',
-    locale: 'es_MX',
+    locale: 'en_US',
     url: 'https://eduardorodriguez.site',
-    title: 'Eduardo Rodriguez Dev | Voice AI & Full-Stack Solutions',
-    description: 'Agentes de IA que trabajan 24/7 • 500K+ llamadas procesadas • 7 años desarrollando AI ética',
-    siteName: 'Eduardo Rodriguez Dev Portfolio',
+    title: 'Eduardo Rdz | Voice AI & Full-Stack Solutions',
+    description: 'AI agents working 24/7 • 500K+ calls processed • 7 years developing Ethical AI',
+    siteName: 'Eduardo Rdz Portfolio',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Eduardo Rodriguez Dev - Voice AI Developer',
+        alt: 'Eduardo Rdz - Voice AI Developer',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Eduardo Rodriguez Dev | Voice AI & Full-Stack Solutions',
-    description: 'Desarrollo agentes de IA que atienden 500+ llamadas/mes',
+    title: 'Eduardo Rdz | Voice AI & Full-Stack Solutions',
+    description: 'I build AI agents that handle 500+ calls/month',
     images: ['/og-image.jpg'],
-    creator: '@harrydev',
+    creator: '@eduardordz',
   },
   robots: {
     index: true,
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'tu-codigo-de-verificacion', // Añadir Google Search Console
+    google: 'your-verification-code',
   },
 }
 
@@ -77,13 +78,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`${spaceGrotesk.variable} ${lexend.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${spaceGrotesk.variable} ${lexend.variable} ${jetbrainsMono.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       </head>
       <body className="font-body antialiased bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
         {children}
+        <VoiceAgentButton />
       </body>
     </html>
   )

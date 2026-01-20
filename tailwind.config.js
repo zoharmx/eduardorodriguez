@@ -36,6 +36,7 @@ module.exports = {
         'glow': 'glow 2s ease-in-out infinite',
         'slide-up': 'slideUp 0.5s ease-out',
         'fade-in': 'fadeIn 0.6s ease-out',
+        'shimmer': 'shimmer 1.5s infinite',
       },
       keyframes: {
         float: {
@@ -54,6 +55,9 @@ module.exports = {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        shimmer: {
+          '100%': { transform: 'translateX(100%)' },
         },
       },
     },

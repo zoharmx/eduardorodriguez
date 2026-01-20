@@ -32,3 +32,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# sensitive/private folders
+Proyectos Autorizados/
+Proyectos Autorizados.zip
+trabajos/
+images/
+
+# temporary files
+tmpclaude-*
+
+# local settings
+.claude/settings.local.json
+
+# documentation (keep private)
+RESUMEN-EJECUTIVO.md
