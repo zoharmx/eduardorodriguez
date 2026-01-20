@@ -67,6 +67,18 @@ const projects: Project[] = [
     description: 'Uses AI (Gemini) for contract drafting and Canvas API for biometric signatures with cryptographic audit seals.',
   },
   {
+    id: 'binah-sigma',
+    title: 'Binah-Σ - Cognitive Decision Engine',
+    company: 'Enterprise API',
+    metric: '0.92',
+    metricLabel: 'Binah-Σ Index',
+    impact: 'Auditable AI infrastructure for structured decision evaluation',
+    color: 'emerald',
+    tags: ['FastAPI', 'Pydantic', 'OpenAI SDK', 'Docker', 'Railway'],
+    description: 'Cognitive evaluation engine that produces structured, auditable outputs for enterprise governance, ESG compliance, and policy analysis.',
+    featured: true,
+  },
+  {
     id: 'ethica-ai',
     title: 'Ethica.AI Framework',
     company: 'Decision Systems',
