@@ -25,7 +25,7 @@ export default function Home() {
         }
       })
     }
-    
+
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -33,60 +33,60 @@ export default function Home() {
   return (
     <main className="relative overflow-x-hidden">
       <Navigation />
-      
+
       {/* Progress indicator */}
-      <motion.div 
+      <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-accent-cyan z-50 origin-left"
         style={{ scaleX: scrollYProgress }}
       />
 
       <HeroSection />
 
-      {/* Story Chapter 1: La Pregunta */}
+      {/* Story Chapter 1: The Question */}
       <StorySection
-        id="historia"
+        id="story"
         chapter={1}
         icon={<Sparkles className="w-8 h-8" />}
         color="emerald"
-        title="Todo comenzó con una pregunta"
-        highlight="una pregunta"
-        subtitle="¿Puede la inteligencia artificial tomar decisiones éticas?"
+        title="It all started with a question"
+        highlight="a question"
+        subtitle="Can artificial intelligence make ethical decisions?"
       >
         <p className="text-lg text-slate-400 leading-relaxed mb-6">
-          Mientras otros desarrolladores se enfocaban en hacer que la IA fuera más rápida o más precisa,
-          yo me obsesioné con algo más profundo: ¿cómo puede una máquina entender el bien y el mal?
+          While other developers focused on making AI faster or more accurate,
+          I became obsessed with something deeper: how can a machine understand right and wrong?
         </p>
 
         <p className="text-lg text-slate-400 leading-relaxed mb-8">
-          No era suficiente crear sistemas que funcionaran. Necesitaba crear sistemas que{' '}
-          <span className="text-primary-400 font-semibold">hicieran lo correcto</span>.
+          It wasn&apos;t enough to create systems that worked. I needed to create systems that{' '}
+          <span className="text-primary-400 font-semibold">did the right thing</span>.
         </p>
 
         <div className="p-6 bg-slate-800/50 border border-primary-500/20 rounded-xl backdrop-blur-sm">
           <div className="flex items-start gap-4">
             <Brain className="w-6 h-6 text-primary-400 flex-shrink-0 mt-1" />
             <div>
-              <div className="font-semibold text-primary-400 mb-2">El Insight</div>
+              <div className="font-semibold text-primary-400 mb-2">The Insight</div>
               <div className="text-slate-300">
-                La respuesta estaba en un lugar inesperado: principios cabalísticos milenarios 
-                aplicados a sistemas computacionales modernos.
+                The answer was in an unexpected place: millennial Kabbalistic principles
+                applied to modern computational systems.
               </div>
             </div>
           </div>
         </div>
       </StorySection>
 
-      {/* Story Chapter 2: Tikun Olam - El Proyecto */}
+      {/* Story Chapter 2: Tikun Olam - The Project */}
       <StorySection
         chapter={2}
         icon={<Code className="w-8 h-8" />}
         color="cyan"
-        title="Creé Tikun Olam: IA Ética Observable"
+        title="I created Tikun Olam: Observable Ethical AI"
         highlight="Tikun Olam"
       >
         <p className="text-xl text-slate-300 leading-relaxed mb-4">
-          La primera pipeline de IA ética con{' '}
-          <span className="text-accent-cyan font-semibold">observabilidad total en Datadog</span>.
+          The first ethical AI pipeline with{' '}
+          <span className="text-accent-cyan font-semibold">full observability in Datadog</span>.
         </p>
 
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500/10 border border-primary-500/30 rounded-full text-primary-400 text-sm mb-8">
@@ -95,9 +95,9 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {[
-            { icon: '🔍', title: 'Bias Detection', desc: '73% de sesgos detectados entre modelos Occidentales vs Orientales' },
-            { icon: '📊', title: 'Observability', desc: 'Monitoreo en tiempo real con Datadog y métricas BinahSigma' },
-            { icon: '🧠', title: 'Multi-Model', desc: 'Orquestación de Vertex AI para comparación civilizatoria' }
+            { icon: '🔍', title: 'Bias Detection', desc: '73% biases detected between Western vs Eastern models' },
+            { icon: '📊', title: 'Observability', desc: 'Real-time monitoring with Datadog and BinahSigma metrics' },
+            { icon: '🧠', title: 'Multi-Model', desc: 'Vertex AI orchestration for civilizational comparison' }
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -114,43 +114,52 @@ export default function Home() {
         </div>
 
         <div className="p-6 bg-gradient-to-r from-accent-cyan/10 to-accent-blue/10 border border-accent-cyan/30 rounded-xl">
-          <div className="text-accent-cyan font-semibold mb-3">Stack Tecnológico</div>
+          <div className="text-accent-cyan font-semibold mb-3">Tech Stack</div>
           <div className="flex flex-wrap gap-2 mb-4">
-            {['Python', 'Vertex AI', 'Datadog', 'BinahSigma', 'Google Cloud'].map((tech) => (
+            {['Python', 'Vertex AI', 'Datadog', 'BinahSigma', 'Google Cloud', 'DeepSeek'].map((tech) => (
               <span key={tech} className="px-3 py-1 bg-accent-cyan/10 text-accent-cyan text-xs rounded-full border border-accent-cyan/20">
                 {tech}
               </span>
             ))}
           </div>
-          <Link
-            href="https://github.com/zoharmx/TikunOlam"
-            target="_blank"
-            className="inline-flex items-center gap-2 text-accent-cyan hover:gap-3 transition-all"
-          >
-            Ver proyecto en GitHub <ArrowRight className="w-4 h-4" />
-          </Link>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="https://tikunolam-mmwy8fmm.manus.space/"
+              target="_blank"
+              className="inline-flex items-center gap-2 text-accent-cyan hover:gap-3 transition-all"
+            >
+              Try Live Demo <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="https://github.com/zoharmx/TikunOlam"
+              target="_blank"
+              className="inline-flex items-center gap-2 text-slate-400 hover:text-accent-cyan transition-all"
+            >
+              View on GitHub <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </StorySection>
 
-      {/* Story Chapter 3: Problemas Reales */}
+      {/* Story Chapter 3: Real Problems */}
       <ProjectsShowcase />
 
-      {/* Story Chapter 4: Soluciones Empresariales */}
+      {/* Story Chapter 4: Enterprise Solutions */}
       <StorySection
         chapter={4}
         icon={<TrendingUp className="w-8 h-8" />}
         color="primary"
-        title="Ahora resuelvo problemas empresariales con IA"
-        highlight="problemas empresariales"
+        title="Now I solve enterprise problems with AI"
+        highlight="enterprise problems"
       >
         <p className="text-xl md:text-2xl text-slate-300 leading-relaxed mb-12">
-          Combino <span className="text-primary-400 font-semibold">principios éticos profundos</span> con{' '}
-          <span className="text-accent-cyan font-semibold">tecnología de punta</span> para crear soluciones 
-          que no solo funcionan, sino que transforman negocios.
+          I combine <span className="text-primary-400 font-semibold">deep ethical principles</span> with{' '}
+          <span className="text-accent-cyan font-semibold">cutting-edge technology</span> to create solutions
+          that don&apos;t just work, but transform businesses.
         </p>
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             className="p-8 bg-gradient-to-br from-primary-500/10 to-accent-cyan/10 border border-primary-500/30 rounded-2xl"
@@ -158,8 +167,8 @@ export default function Home() {
             <Phone className="w-12 h-12 text-primary-400 mb-4" />
             <h3 className="text-2xl font-bold mb-3">Voice AI Agents</h3>
             <p className="text-slate-300 mb-4">
-              Agentes conversacionales que hablan español natural, cualifican leads y 
-              manejan consultas complejas 24/7.
+              Conversational agents that speak natural language, qualify leads and
+              handle complex queries 24/7.
             </p>
             <ul className="space-y-2 text-sm text-slate-400">
               <li className="flex items-center gap-2">
@@ -168,16 +177,16 @@ export default function Home() {
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary-400 rounded-full" />
-                Pronunciación perfecta de números
+                Perfect number pronunciation
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-primary-400 rounded-full" />
-                Routing inteligente personalizado
+                Customized intelligent routing
               </li>
             </ul>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             className="p-8 bg-gradient-to-br from-accent-cyan/10 to-accent-blue/10 border border-accent-cyan/30 rounded-2xl"
@@ -185,8 +194,8 @@ export default function Home() {
             <Code className="w-12 h-12 text-accent-cyan mb-4" />
             <h3 className="text-2xl font-bold mb-3">Full-Stack Development</h3>
             <p className="text-slate-300 mb-4">
-              Aplicaciones web escalables con React, Firebase y APIs modernas 
-              que tus clientes pueden usar desde el día 1.
+              Scalable web applications with React, Firebase and modern APIs
+              that your clients can use from day 1.
             </p>
             <ul className="space-y-2 text-sm text-slate-400">
               <li className="flex items-center gap-2">
@@ -195,11 +204,11 @@ export default function Home() {
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-accent-cyan rounded-full" />
-                Firebase + APIs REST
+                Firebase + REST APIs
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 bg-accent-cyan rounded-full" />
-                Dashboards en tiempo real
+                Real-time dashboards
               </li>
             </ul>
           </motion.div>

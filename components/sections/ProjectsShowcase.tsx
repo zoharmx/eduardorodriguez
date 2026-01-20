@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Rocket, ArrowRight, ExternalLink } from 'lucide-react'
+import { Rocket, ArrowRight, ExternalLink, Star } from 'lucide-react'
 import Link from 'next/link'
 import StorySection from './StorySection'
 
@@ -17,6 +17,7 @@ interface Project {
   color: ColorKey
   tags: string[]
   description: string
+  featured?: boolean
 }
 
 const projects: Project[] = [
@@ -26,10 +27,11 @@ const projects: Project[] = [
     company: 'Google Cloud x Datadog Winner',
     metric: '73%',
     metricLabel: 'Bias Detected',
-    impact: 'Primera pipeline de IA ética con observabilidad total en Datadog',
+    impact: 'First ethical AI pipeline with full observability in Datadog',
     color: 'emerald',
-    tags: ['Python', 'Vertex AI', 'Datadog', 'BinahSigma'],
-    description: 'Detecta desviaciones civilizatorias comparando modelos Occidentales vs Orientales. Arquitectura de observabilidad que monitorea sesgos en tiempo real.',
+    tags: ['Python', 'Vertex AI', 'Datadog', 'BinahSigma', 'DeepSeek'],
+    description: 'Detects civilizational biases by comparing Western vs Eastern AI models. Real-time bias monitoring architecture with custom metrics.',
+    featured: true,
   },
   {
     id: 'vocalisai',
@@ -37,21 +39,21 @@ const projects: Project[] = [
     company: 'Automated Sales',
     metric: 'Voice-to-Pay',
     metricLabel: 'Push-to-Link',
-    impact: 'Agente telefónico autónomo capaz de cerrar ventas',
+    impact: 'Autonomous phone agent capable of closing sales',
     color: 'purple',
     tags: ['ElevenLabs', 'Twilio', 'Stripe API', 'FastAPI'],
-    description: 'Integra ElevenLabs para conversación natural y Stripe para generar enlaces de pago "Push-to-Link" en tiempo real durante llamadas.',
+    description: 'Integrates ElevenLabs for natural conversation and Stripe for real-time "Push-to-Link" payment generation during calls.',
   },
   {
     id: 'hoymismo-gps',
     title: 'HoyMismoGPS - IoT Infrastructure',
-    company: 'Logística Enterprise',
+    company: 'Enterprise Logistics',
     metric: '500+',
-    metricLabel: 'Assets Monitoreados',
-    impact: 'Sistema de rastreo de alta concurrencia con latencia sub-segundo',
+    metricLabel: 'Assets Monitored',
+    impact: 'High-concurrency tracking system with sub-second latency',
     color: 'cyan',
     tags: ['Python Asyncio', 'TCP/IP', 'Redis', 'Mapbox GL'],
-    description: 'Procesa protocolos binarios TCP/IP para monitoreo en tiempo real de flotas masivas con arquitectura de alta disponibilidad.',
+    description: 'Processes TCP/IP binary protocols for real-time monitoring of massive fleets with high-availability architecture.',
   },
   {
     id: 'signaflow',
@@ -59,10 +61,10 @@ const projects: Project[] = [
     company: 'SaaS Platform',
     metric: 'SHA-256',
     metricLabel: 'Audit Trail',
-    impact: 'Plataforma de firma digital con validez legal',
+    impact: 'Digital signature platform with legal validity',
     color: 'purple',
     tags: ['React 19', 'Gemini Pro', 'Firebase Auth', 'Canvas API'],
-    description: 'Utiliza IA (Gemini) para redactar contratos y Canvas API para firmas biométricas con sello de auditoría criptográfico.',
+    description: 'Uses AI (Gemini) for contract drafting and Canvas API for biometric signatures with cryptographic audit seals.',
   },
   {
     id: 'ethica-ai',
@@ -70,21 +72,21 @@ const projects: Project[] = [
     company: 'Decision Systems',
     metric: '10-Layer',
     metricLabel: 'Pipeline',
-    impact: 'Arquitectura Multi-Proveedor para decisiones corporativas',
+    impact: 'Multi-Provider architecture for corporate decisions',
     color: 'emerald',
     tags: ['Multi-LLM Orch', 'GraphQL', 'Python SDK', 'Pydantic'],
-    description: 'Orquesta Gemini, Mistral y DeepSeek para eliminar sesgos en la toma de decisiones corporativas críticas.',
+    description: 'Orchestrates Gemini, Mistral and DeepSeek to eliminate biases in critical corporate decision-making.',
   },
   {
     id: 'enterprise-logistics',
     title: 'Enterprise Logistics OS',
-    company: 'HoyMismo Paquetería',
+    company: 'HoyMismo Courier',
     metric: 'All-in-One',
     metricLabel: 'CRM + AI',
-    impact: 'Sistema operativo completo para logística internacional',
+    impact: 'Complete operating system for international logistics',
     color: 'cyan',
     tags: ['Next.js 14', 'Firebase', 'Tailwind', 'Recharts'],
-    description: 'Integra CRM, facturación, tracking y asistente de IA en un dashboard unificado para operaciones de paquetería.',
+    description: 'Integrates CRM, billing, tracking and AI assistant in a unified dashboard for courier operations.',
   }
 ]
 
@@ -109,23 +111,23 @@ const colorStyles: Record<ColorKey, { border: string; text: string; bg: string }
 export default function ProjectsShowcase() {
   return (
     <StorySection
-      id="proyectos"
+      id="projects"
       chapter={3}
       icon={<Rocket className="w-8 h-8" />}
       color="purple"
-      title="Después lo apliqué a problemas reales"
-      highlight="problemas reales"
+      title="Then I applied it to real problems"
+      highlight="real problems"
     >
       <p className="text-xl text-slate-300 leading-relaxed mb-12">
-        La teoría es hermosa, pero los negocios necesitan{' '}
-        <span className="text-accent-purple font-semibold">resultados tangibles</span>. 
-        Tomé todo lo aprendido y comencé a resolver problemas empresariales reales.
+        Theory is beautiful, but businesses need{' '}
+        <span className="text-accent-purple font-semibold">tangible results</span>.
+        I took everything I learned and started solving real business problems.
       </p>
 
       <div className="space-y-6">
         {projects.map((project, i) => {
           const styles = colorStyles[project.color]
-          
+
           return (
             <motion.div
               key={project.id}
@@ -133,8 +135,14 @@ export default function ProjectsShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15 }}
               viewport={{ once: true }}
-              className={`group p-6 bg-slate-800/50 border ${styles.border} rounded-xl backdrop-blur-sm transition-all cursor-pointer`}
+              className={`group p-6 bg-slate-800/50 border ${styles.border} rounded-xl backdrop-blur-sm transition-all cursor-pointer ${project.featured ? 'ring-2 ring-primary-500/30' : ''}`}
             >
+              {project.featured && (
+                <div className="flex items-center gap-2 mb-4">
+                  <Star className="w-4 h-4 text-primary-400 fill-primary-400" />
+                  <span className="text-xs text-primary-400 font-semibold uppercase tracking-wider">Featured Project</span>
+                </div>
+              )}
               <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
                 <div className="flex-1">
                   <h3 className="font-semibold text-lg text-white mb-1 group-hover:text-primary-400 transition-colors">
@@ -157,7 +165,7 @@ export default function ProjectsShowcase() {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="text-center md:text-right min-w-[140px]">
                   <div className={`text-3xl md:text-4xl font-bold ${styles.text} font-display`}>
                     {project.metric}
@@ -170,13 +178,13 @@ export default function ProjectsShowcase() {
 
               <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
                 <div className="text-slate-400 text-sm">
-                  💡 {project.impact}
+                  {project.impact}
                 </div>
                 <Link
                   href={`/case-studies/${project.id}`}
                   className={`inline-flex items-center gap-2 ${styles.text} text-sm font-medium group-hover:gap-3 transition-all`}
                 >
-                  Ver caso de estudio completo
+                  View full case study
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -197,7 +205,7 @@ export default function ProjectsShowcase() {
           href="/case-studies"
           className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800/50 border border-primary-500/30 rounded-lg hover:border-primary-500/50 hover:bg-slate-800/70 transition-all group"
         >
-          Ver todos los proyectos
+          View all projects
           <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
         </Link>
       </motion.div>

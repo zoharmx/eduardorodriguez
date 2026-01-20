@@ -13,10 +13,10 @@ export default function HeroSection() {
   })
 
   const metrics = [
-    { number: 500000, suffix: '+', label: 'Llamadas Procesadas' },
-    { number: 23, suffix: '', label: 'Proyectos 2024' },
-    { number: 98, suffix: '%', label: 'Clientes Recurrentes' },
-    { number: 7, suffix: ' años', label: 'Desarrollando AI Ética' }
+    { number: 500000, suffix: '+', label: 'Calls Processed' },
+    { number: 23, suffix: '', label: 'Projects 2024' },
+    { number: 98, suffix: '%', label: 'Recurring Clients' },
+    { number: 7, suffix: ' yrs', label: 'Building Ethical AI' }
   ]
 
   return (
@@ -50,7 +50,7 @@ export default function HeroSection() {
       {/* Gradient Blurs */}
       <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary-500 rounded-full blur-[150px] opacity-20 animate-pulse" />
       <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-accent-cyan rounded-full blur-[150px] opacity-20 animate-pulse animation-delay-400" />
-      
+
       <div className="relative z-10 text-center px-6 max-w-5xl" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -71,13 +71,13 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 leading-tight"
         >
-          Ingeniería de{' '}
+          Engineering{' '}
           <span className="gradient-text">
-            IA Ética
+            Ethical AI
           </span>
           <br />
           <span className="bg-gradient-to-r from-accent-cyan to-accent-blue bg-clip-text text-transparent">
-            & Misión Crítica
+            & Mission Critical
           </span>
         </motion.h1>
 
@@ -87,11 +87,11 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto text-balance"
         >
-          Desde <span className="text-white font-semibold">Agentes de Voz</span> que facturan autónomamente hasta{' '}
-          <span className="text-white font-semibold">Arquitecturas IoT</span> de alta escala.{' '}
-          Construyo tecnología <span className="text-primary-400 font-semibold">auditable y rentable</span>.
+          From <span className="text-white font-semibold">Voice Agents</span> that invoice autonomously to{' '}
+          <span className="text-white font-semibold">IoT Architectures</span> at scale.{' '}
+          I build technology that is <span className="text-primary-400 font-semibold">auditable and profitable</span>.
         </motion.p>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -100,7 +100,7 @@ export default function HeroSection() {
         >
           <Link href="/contact" className="group btn-primary">
             <Calendar className="w-5 h-5" />
-            Agenda una Llamada Estratégica
+            Schedule a Strategy Call
             <motion.span
               className="inline-block"
               animate={{ x: [0, 5, 0] }}
@@ -109,10 +109,23 @@ export default function HeroSection() {
               →
             </motion.span>
           </Link>
-          <button className="btn-secondary flex items-center gap-2">
+          <a
+            href="https://tikunolam-mmwy8fmm.manus.space/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary flex items-center gap-2"
+          >
             <Play className="w-5 h-5" />
-            Ver Demo en Vivo
-          </button>
+            View Live Demo
+          </a>
+          <a
+            href="https://devpost.com/software/tikun-olam-observable-ethical-ai-framework?ref_content=user-portfolio&ref_feature=in_progress"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-400 hover:text-primary-400 transition-colors text-sm flex items-center gap-2"
+          >
+            View on Devpost →
+          </a>
         </motion.div>
 
         {/* Metrics */}

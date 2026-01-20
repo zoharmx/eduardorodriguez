@@ -18,10 +18,10 @@ export default function Navigation() {
   }, [])
 
   const navItems = [
-    { name: 'Historia', href: '#historia' },
-    { name: 'Proyectos', href: '#proyectos' },
+    { name: 'Story', href: '#story' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contacto', href: '/contact' },
+    { name: 'Contact', href: '/contact' },
   ]
 
   return (
@@ -36,7 +36,7 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-display font-bold gradient-text">
-          HarryDev
+          Eduardo Rdz
         </Link>
 
         {/* Desktop Navigation */}

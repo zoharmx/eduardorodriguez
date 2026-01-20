@@ -8,20 +8,20 @@ export default function Footer() {
 
   const footerLinks = {
     projects: [
-      { name: 'Voice AI HoyMismo', href: '/case-studies/voice-ai-hoymismo' },
+      { name: 'Tikun Olam', href: '/case-studies/tikun-olam' },
+      { name: 'VocalisAI', href: '/case-studies/vocalisai' },
       { name: 'HoyMismoGPS', href: '/case-studies/hoymismo-gps' },
-      { name: 'Tikún Framework', href: '/case-studies/tikun-framework' },
-      { name: 'Ver todos', href: '/case-studies' },
+      { name: 'View all', href: '/#projects' },
     ],
     resources: [
       { name: 'Blog', href: '/blog' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Descargar CV', href: '/cv.pdf' },
+      { name: 'Case Studies', href: '/#projects' },
+      { name: 'Download CV', href: '/cv.pdf' },
     ],
     social: [
-      { name: 'LinkedIn', href: 'https://linkedin.com/in/harrydev', icon: <Linkedin className="w-5 h-5" /> },
-      { name: 'GitHub', href: 'https://github.com/harrydev', icon: <Github className="w-5 h-5" /> },
-      { name: 'Email', href: 'mailto:harry@harrydev.com', icon: <Mail className="w-5 h-5" /> },
+      { name: 'LinkedIn', href: 'https://linkedin.com/in/eduardo-rodriguez-dev', icon: <Linkedin className="w-5 h-5" /> },
+      { name: 'GitHub', href: 'https://github.com/zoharmx', icon: <Github className="w-5 h-5" /> },
+      { name: 'Email', href: 'mailto:jesuseduardorodriguezsaucedo@outlook.com', icon: <Mail className="w-5 h-5" /> },
     ],
   }
 
@@ -32,10 +32,10 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-1">
             <Link href="/" className="text-2xl font-display font-bold gradient-text inline-block mb-4">
-              HarryDev
+              Eduardo Rdz
             </Link>
             <p className="text-slate-400 text-sm mb-6">
-              De principios éticos milenarios a soluciones de IA modernas.
+              From millennial ethical principles to modern AI solutions.
             </p>
             <div className="flex gap-3">
               {footerLinks.social.map((link) => (
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Projects Column */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Proyectos</h3>
+            <h3 className="font-semibold text-white mb-4">Projects</h3>
             <ul className="space-y-3">
               {footerLinks.projects.map((link) => (
                 <li key={link.name}>
@@ -74,7 +74,7 @@ export default function Footer() {
 
           {/* Resources Column */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Recursos</h3>
+            <h3 className="font-semibold text-white mb-4">Resources</h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
@@ -91,15 +91,15 @@ export default function Footer() {
 
           {/* Contact Column */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Contacto</h3>
+            <h3 className="font-semibold text-white mb-4">Contact</h3>
             <p className="text-slate-400 text-sm mb-3">
-              ¿Tienes un proyecto en mente?
+              Have a project in mind?
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 text-primary-400 hover:gap-3 transition-all text-sm font-medium"
             >
-              Agenda una llamada
+              Schedule a call
               <ExternalLink className="w-4 h-4" />
             </Link>
           </div>
@@ -108,15 +108,15 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-400 text-sm text-center md:text-left">
-            © {currentYear} Harry Dev. Todos los derechos reservados.
+            © {currentYear} Eduardo Rdz. All rights reserved.
           </p>
-          
+
           <div className="flex gap-6 text-sm text-slate-400">
             <Link href="/privacy" className="hover:text-primary-400 transition-colors">
-              Privacidad
+              Privacy
             </Link>
             <Link href="/terms" className="hover:text-primary-400 transition-colors">
-              Términos
+              Terms
             </Link>
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function Footer() {
         {/* Tech Stack Credit */}
         <div className="mt-8 pt-8 border-t border-slate-800">
           <p className="text-center text-slate-500 text-xs">
-            Desarrollado con{' '}
+            Built with{' '}
             <span className="text-primary-400">React + Next.js + Tailwind + Framer Motion</span>
             {' • '}
             Deployed on <span className="text-primary-400">Vercel</span>
