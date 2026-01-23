@@ -152,81 +152,99 @@ export default function TikunOlamCaseStudy() {
               <h3 className="text-2xl font-bold text-white">Framework in Action</h3>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="relative aspect-video rounded-xl overflow-hidden border border-emerald-500/20 bg-slate-800/50">
-                <img
-                  src="/images/tikun/graphic_01_divergence_meter_75_FINAL.png"
-                  alt="BinahSigma Divergence Meter showing 73% bias delta"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+              <div className="rounded-xl overflow-hidden border border-emerald-500/30 bg-slate-900">
+                <div className="p-4 bg-slate-800/50">
+                  <img
+                    src="/images/tikun/graphic_01_divergence_meter_75_FINAL.png"
+                    alt="BinahSigma Divergence Meter showing 73% bias delta"
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
+                <div className="p-4 border-t border-emerald-500/20">
                   <p className="text-sm text-white font-semibold">BinahSigma Divergence Meter</p>
-                  <p className="text-xs text-slate-300">73% civilizational bias detected</p>
+                  <p className="text-xs text-slate-400">73% civilizational bias detected</p>
                 </div>
               </div>
-              <div className="relative aspect-video rounded-xl overflow-hidden border border-emerald-500/20 bg-slate-800/50">
-                <img
-                  src="/images/tikun/graphic_02_decision_flow_FINAL.png"
-                  alt="Decision Flow showing conditional approval"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+              <div className="rounded-xl overflow-hidden border border-emerald-500/30 bg-slate-900">
+                <div className="p-4 bg-slate-800/50">
+                  <img
+                    src="/images/tikun/graphic_02_decision_flow_FINAL.png"
+                    alt="Decision Flow showing conditional approval"
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
+                <div className="p-4 border-t border-emerald-500/20">
                   <p className="text-sm text-white font-semibold">Decision Flow Analysis</p>
-                  <p className="text-xs text-slate-300">Conditional approval with safeguards</p>
+                  <p className="text-xs text-slate-400">Conditional approval with safeguards</p>
                 </div>
               </div>
-              <div className="relative aspect-video rounded-xl overflow-hidden border border-blue-500/20 bg-slate-800/50">
-                <img
-                  src="/images/tikun/03_west_blind_spots.png"
-                  alt="Western AI Blind Spots Analysis"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+            </div>
+
+            {/* Blind Spots Analysis - Full Width Cards */}
+            <div className="mt-6 grid md:grid-cols-2 gap-6">
+              <div className="rounded-xl overflow-hidden border border-blue-500/30 bg-slate-900">
+                <div className="p-4 bg-blue-500/5">
+                  <img
+                    src="/images/tikun/03_west_blind_spots.png"
+                    alt="Western AI Blind Spots Analysis"
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
+                <div className="p-4 border-t border-blue-500/20">
                   <p className="text-sm text-white font-semibold">Western AI Blind Spots</p>
-                  <p className="text-xs text-slate-300">6 cultural assumptions identified</p>
+                  <p className="text-xs text-slate-400">6 cultural assumptions identified</p>
                 </div>
               </div>
-              <div className="relative aspect-video rounded-xl overflow-hidden border border-amber-500/20 bg-slate-800/50">
-                <img
-                  src="/images/tikun/04_east_blind_spots.png"
-                  alt="Eastern AI Blind Spots Analysis"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+              <div className="rounded-xl overflow-hidden border border-amber-500/30 bg-slate-900">
+                <div className="p-4 bg-amber-500/5">
+                  <img
+                    src="/images/tikun/04_east_blind_spots.png"
+                    alt="Eastern AI Blind Spots Analysis"
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
+                <div className="p-4 border-t border-amber-500/20">
                   <p className="text-sm text-white font-semibold">Eastern AI Blind Spots</p>
-                  <p className="text-xs text-slate-300">8 value divergences detected</p>
+                  <p className="text-xs text-slate-400">8 value divergences detected</p>
                 </div>
               </div>
             </div>
 
             {/* Console Screenshots */}
             <div className="mt-8 grid md:grid-cols-3 gap-4">
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-emerald-500/20 bg-slate-800/50">
-                <img
-                  src="/images/tikun/binahsigma.png"
-                  alt="BinahSigma Console Output"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-2 bg-slate-900/90">
+              <div className="rounded-lg overflow-hidden border border-emerald-500/20 bg-slate-900">
+                <div className="p-3 bg-slate-800/50">
+                  <img
+                    src="/images/tikun/binahsigma.png"
+                    alt="BinahSigma Console Output"
+                    className="w-full h-auto rounded"
+                  />
+                </div>
+                <div className="p-2 border-t border-emerald-500/20">
                   <p className="text-xs text-emerald-400 font-mono">BinahSigma Engine</p>
                 </div>
               </div>
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-emerald-500/20 bg-slate-800/50">
-                <img
-                  src="/images/tikun/07b_sefirah_metrics.png"
-                  alt="Sefirah Metrics Dashboard"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-2 bg-slate-900/90">
+              <div className="rounded-lg overflow-hidden border border-emerald-500/20 bg-slate-900">
+                <div className="p-3 bg-slate-800/50">
+                  <img
+                    src="/images/tikun/07b_sefirah_metrics.png"
+                    alt="Sefirah Metrics Dashboard"
+                    className="w-full h-auto rounded"
+                  />
+                </div>
+                <div className="p-2 border-t border-emerald-500/20">
                   <p className="text-xs text-emerald-400 font-mono">Sefirah Metrics</p>
                 </div>
               </div>
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-purple-500/20 bg-slate-800/50">
-                <img
-                  src="/images/tikun/02_decision_conditional_go.png"
-                  alt="Conditional Decision Output"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-2 bg-slate-900/90">
+              <div className="rounded-lg overflow-hidden border border-purple-500/20 bg-slate-900">
+                <div className="p-3 bg-slate-800/50">
+                  <img
+                    src="/images/tikun/02_decision_conditional_go.png"
+                    alt="Conditional Decision Output"
+                    className="w-full h-auto rounded"
+                  />
+                </div>
+                <div className="p-2 border-t border-purple-500/20">
                   <p className="text-xs text-purple-400 font-mono">Decision Output</p>
                 </div>
               </div>

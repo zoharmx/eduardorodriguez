@@ -188,16 +188,16 @@ export default function ProjectsShowcase() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 border-t border-slate-700/50">
                 <div className="text-slate-400 text-sm">
                   {project.impact}
                 </div>
                 <Link
                   href={`/case-studies/${project.id}`}
-                  className={`inline-flex items-center gap-2 ${styles.text} text-sm font-medium group-hover:gap-3 transition-all`}
+                  className={`inline-flex items-center gap-2 px-5 py-2.5 ${styles.bg} ${styles.text} border-2 ${styles.border} rounded-lg font-semibold hover:scale-105 transition-all shadow-lg`}
                 >
-                  View full case study
-                  <ArrowRight className="w-4 h-4" />
+                  View Full Case Study
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
             </motion.div>

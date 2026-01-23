@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Sparkles, Code, Brain, Rocket, Phone, TrendingUp, Calendar, MessageSquare, ArrowRight } from 'lucide-react'
+import { Sparkles, Code, Brain, Rocket, Phone, TrendingUp, Calendar, MessageSquare, ArrowRight, Download, FileJson, FileText } from 'lucide-react'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import HeroSection from '@/components/sections/HeroSection'
@@ -113,7 +113,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="p-6 bg-gradient-to-r from-accent-cyan/10 to-accent-blue/10 border border-accent-cyan/30 rounded-xl">
+        <div className="p-6 bg-gradient-to-r from-accent-cyan/10 to-accent-blue/10 border border-accent-cyan/30 rounded-xl mb-8">
           <div className="text-accent-cyan font-semibold mb-3">Tech Stack</div>
           <div className="flex flex-wrap gap-2 mb-4">
             {['Python', 'Vertex AI', 'Datadog', 'BinahSigma', 'Google Cloud', 'DeepSeek'].map((tech) => (
@@ -139,6 +139,69 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
+        {/* Datadog Dashboard Preview */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="mb-8"
+        >
+          <h3 className="text-xl font-bold text-white mb-4">For the First Time, Ethics is Observable.</h3>
+          <p className="text-slate-400 mb-4">
+            This is not just philosophy. Every analysis flows to Datadog in real time. We make
+            ethical alignment as observable as performance, errors, or latency.
+          </p>
+          <div className="rounded-xl overflow-hidden border border-accent-cyan/30 shadow-lg shadow-accent-cyan/10">
+            <img
+              src="/images/tikun/datadog-dashboard.png"
+              alt="Tikun Olam Datadog Dashboard showing ethical alignment metrics"
+              className="w-full h-auto"
+            />
+          </div>
+        </motion.div>
+
+        {/* Download Analysis Results - Prominent Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="p-8 bg-gradient-to-r from-primary-500/20 to-accent-cyan/20 border-2 border-primary-500/50 rounded-2xl"
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <Download className="w-8 h-8 text-primary-400" />
+            <div>
+              <h3 className="text-2xl font-bold text-white">Download Real Analysis Results</h3>
+              <p className="text-slate-300">Nvidia-Groq $20B Acquisition - Full Ethical Evaluation</p>
+            </div>
+          </div>
+          <p className="text-slate-400 mb-6">
+            See exactly how Tikun Olam evaluates a real-world scenario. Download the complete analysis
+            with BinahSigma metrics, blind spots identification, and transcendent synthesis.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="/downloads/tikun_nvidia_groq_analysis.json"
+              download
+              className="inline-flex items-center gap-3 px-6 py-4 bg-primary-500 text-white font-bold rounded-xl hover:bg-primary-600 transition-all shadow-lg shadow-primary-500/25"
+            >
+              <FileJson className="w-6 h-6" />
+              Download Full JSON (136KB)
+            </a>
+            <a
+              href="/downloads/tikun_nvidia_groq_summary.txt"
+              download
+              className="inline-flex items-center gap-3 px-6 py-4 bg-accent-cyan text-slate-900 font-bold rounded-xl hover:bg-accent-cyan/90 transition-all shadow-lg shadow-accent-cyan/25"
+            >
+              <FileText className="w-6 h-6" />
+              Download Summary (TXT)
+            </a>
+          </div>
+          <Link
+            href="/case-studies/tikun-olam"
+            className="inline-flex items-center gap-2 mt-6 text-primary-400 hover:text-primary-300 font-semibold transition-colors"
+          >
+            View Full Case Study with Architecture Details <ArrowRight className="w-5 h-5" />
+          </Link>
+        </motion.div>
       </StorySection>
 
       {/* Story Chapter 3: Real Problems */}
