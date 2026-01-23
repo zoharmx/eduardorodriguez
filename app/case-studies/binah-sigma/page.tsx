@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { ArrowLeft, ExternalLink, Brain, Shield, Scale, BarChart3, CheckCircle, Database, Server } from 'lucide-react'
+import { ArrowLeft, ExternalLink, Brain, Shield, Scale, BarChart3, CheckCircle, Database, Server, Play, Image as ImageIcon, Download, FileText } from 'lucide-react'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
@@ -92,6 +92,78 @@ export default function BinahSigmaCaseStudy() {
                 View Binah-Σ
               </a>
             </div>
+          </div>
+
+          {/* Video Demo */}
+          <div className="mb-12">
+            <div className="flex items-center gap-3 mb-4">
+              <Play className="w-6 h-6 text-emerald-400" />
+              <h3 className="text-xl font-bold text-white">Live Demo Video</h3>
+            </div>
+            <div className="aspect-video rounded-xl overflow-hidden border border-emerald-500/20">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/rJUM2hqFYSo"
+                title="Binah-Σ Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+            <p className="text-sm text-slate-400 mt-2 text-center">See Binah-Σ cognitive decision engine in action</p>
+          </div>
+
+          {/* Visual References */}
+          <div className="mb-12">
+            <div className="flex items-center gap-3 mb-6">
+              <ImageIcon className="w-6 h-6 text-emerald-400" />
+              <h3 className="text-2xl font-bold text-white">Platform Interface</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="relative aspect-video rounded-xl overflow-hidden border border-emerald-500/20 bg-slate-800/50">
+                <img
+                  src="/images/binah/ejemplo.png"
+                  alt="Binah-Σ Decision Analysis Example"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+                  <p className="text-sm text-white font-semibold">Decision Analysis Output</p>
+                  <p className="text-xs text-slate-300">Structured evaluation with metrics</p>
+                </div>
+              </div>
+              <div className="relative aspect-video rounded-xl overflow-hidden border border-emerald-500/20 bg-slate-800/50 flex items-center justify-center">
+                <img
+                  src="/images/binah/favicon.png"
+                  alt="Binah-Σ Logo"
+                  className="w-32 h-32 object-contain"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+                  <p className="text-sm text-white font-semibold">Binah-Σ Identity</p>
+                  <p className="text-xs text-slate-300">Cognitive decision infrastructure</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Download Architecture Documentation */}
+          <div className="mb-12 p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border-2 border-dashed border-emerald-500/50 rounded-xl">
+            <div className="flex items-center gap-3 mb-4">
+              <Download className="w-6 h-6 text-emerald-400" />
+              <span className="text-lg font-semibold text-white">Technical Documentation</span>
+            </div>
+            <p className="text-slate-300 text-sm mb-4">
+              Download the complete architecture documentation including API specs, deployment guides, and roadmap.
+            </p>
+            <a
+              href="/downloads/binah_sigma_architecture.md"
+              download
+              className="inline-flex items-center gap-3 px-5 py-3 bg-emerald-500/20 border-2 border-emerald-500/50 rounded-lg hover:bg-emerald-500/30 transition-all text-emerald-400 font-medium"
+            >
+              <FileText className="w-5 h-5" />
+              Download Architecture Documentation (MD)
+            </a>
           </div>
 
           {/* Metrics Grid */}

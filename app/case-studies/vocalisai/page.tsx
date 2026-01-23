@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { ArrowLeft, ExternalLink, Phone, CreditCard, Mic, Zap, DollarSign } from 'lucide-react'
+import { ArrowLeft, ExternalLink, Phone, CreditCard, Mic, Zap, DollarSign, Globe, Image as ImageIcon } from 'lucide-react'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
@@ -64,22 +64,87 @@ export default function VocalisAICaseStudy() {
             </p>
           </div>
 
-          {/* Live Demo CTA */}
+          {/* Live Demo CTA - Dual Region */}
           <div className="mb-12 p-8 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-xl">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-2">Prueba el Demo en Vivo</h3>
-                <p className="text-slate-300">
-                  Llama ahora y experimenta una conversacion con Sofia, nuestra agente de IA
-                </p>
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-white mb-2">Talk to Sofia Live</h3>
+              <p className="text-slate-300">
+                Call now and experience a real-time conversation with our AI voice agent
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Mexico Version */}
+              <div className="p-6 bg-slate-800/50 border border-purple-500/30 rounded-xl text-center">
+                <div className="flex items-center justify-center gap-2 mb-3">
+                  <span className="text-2xl">🇲🇽</span>
+                  <span className="text-lg font-semibold text-white">Mexico (Spanish)</span>
+                </div>
+                <a
+                  href="tel:+528141661014"
+                  className="btn-primary inline-flex items-center gap-3 text-lg px-6 py-4 w-full justify-center"
+                >
+                  <Phone className="w-6 h-6" />
+                  +52 814 166 1014
+                </a>
+                <p className="text-slate-400 text-sm mt-3">Sofia speaks fluent Latin American Spanish</p>
               </div>
-              <a
-                href="tel:+528141661014"
-                className="btn-primary inline-flex items-center gap-3 text-lg px-8 py-4 whitespace-nowrap"
-              >
-                <Phone className="w-6 h-6" />
-                +52 814 166 1014
-              </a>
+
+              {/* USA Version */}
+              <div className="p-6 bg-slate-800/50 border border-cyan-500/30 rounded-xl text-center">
+                <div className="flex items-center justify-center gap-2 mb-3">
+                  <span className="text-2xl">🇺🇸</span>
+                  <span className="text-lg font-semibold text-white">United States (English)</span>
+                </div>
+                <a
+                  href="tel:+18884306777"
+                  className="inline-flex items-center gap-3 text-lg px-6 py-4 w-full justify-center bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors"
+                >
+                  <Globe className="w-6 h-6" />
+                  +1 888 430 6777
+                </a>
+                <p className="text-slate-400 text-sm mt-3">Toll-Free - Sofia in American English</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Visual References Gallery */}
+          <div className="mb-12">
+            <div className="flex items-center gap-3 mb-6">
+              <ImageIcon className="w-6 h-6 text-purple-400" />
+              <h3 className="text-2xl font-bold text-white">Platform Screenshots</h3>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-purple-500/20 bg-slate-800/50">
+                <img
+                  src="/images/vocalis/vocalis-1.png"
+                  alt="VocalisAI Dashboard"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+                  <p className="text-sm text-white font-semibold">Agent Configuration</p>
+                </div>
+              </div>
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-purple-500/20 bg-slate-800/50">
+                <img
+                  src="/images/vocalis/vocalis-2.png"
+                  alt="VocalisAI Call Flow"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+                  <p className="text-sm text-white font-semibold">Call Flow Designer</p>
+                </div>
+              </div>
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-purple-500/20 bg-slate-800/50">
+                <img
+                  src="/images/vocalis/vocalis-3.png"
+                  alt="VocalisAI Analytics"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+                  <p className="text-sm text-white font-semibold">Analytics Dashboard</p>
+                </div>
+              </div>
             </div>
           </div>
 

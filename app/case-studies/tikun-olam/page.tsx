@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
-import { ArrowLeft, ExternalLink, Github, TrendingUp, Eye, Brain, Shield, Download, Play, Clock, Target, Zap } from 'lucide-react'
+import { ArrowLeft, ExternalLink, Github, TrendingUp, Eye, Brain, Shield, Download, Play, Clock, Target, Zap, FileJson, FileText, Image as ImageIcon } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
@@ -78,7 +79,7 @@ export default function TikunOlamCaseStudy() {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://devpost.com/software/tikun-olam-observable-ethical-ai-framework"
+                href="https://tikun.pro"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center gap-2"
@@ -95,6 +96,35 @@ export default function TikunOlamCaseStudy() {
                 <Github className="w-5 h-5" />
                 GitHub Repository
               </a>
+            </div>
+
+            {/* Prominent Download Section */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border-2 border-emerald-500/50 rounded-xl">
+              <div className="flex items-center gap-3 mb-4">
+                <Download className="w-6 h-6 text-emerald-400" />
+                <h3 className="text-xl font-bold text-white">Download Analysis Results</h3>
+              </div>
+              <p className="text-slate-300 text-sm mb-4">
+                Get the complete ethical analysis output from our Nvidia-Groq $20B acquisition case study.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="/downloads/tikun_nvidia_groq_analysis.json"
+                  download
+                  className="inline-flex items-center gap-3 px-6 py-3 bg-emerald-500/20 border-2 border-emerald-500/50 rounded-lg hover:bg-emerald-500/30 hover:border-emerald-400 transition-all text-emerald-400 font-semibold"
+                >
+                  <FileJson className="w-5 h-5" />
+                  Download Full JSON (136KB)
+                </a>
+                <a
+                  href="/downloads/tikun_nvidia_groq_summary.txt"
+                  download
+                  className="inline-flex items-center gap-3 px-6 py-3 bg-cyan-500/20 border-2 border-cyan-500/50 rounded-lg hover:bg-cyan-500/30 hover:border-cyan-400 transition-all text-cyan-400 font-semibold"
+                >
+                  <FileText className="w-5 h-5" />
+                  Download Summary (TXT)
+                </a>
+              </div>
             </div>
           </div>
 
@@ -113,6 +143,94 @@ export default function TikunOlamCaseStudy() {
               ></iframe>
             </div>
             <p className="text-sm text-slate-400 mt-2 text-center">Hackathon presentation video - Tikun Olam in action</p>
+          </div>
+
+          {/* Visual Gallery - Framework in Action */}
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <ImageIcon className="w-6 h-6 text-emerald-400" />
+              <h3 className="text-2xl font-bold text-white">Framework in Action</h3>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="relative aspect-video rounded-xl overflow-hidden border border-emerald-500/20 bg-slate-800/50">
+                <img
+                  src="/images/tikun/graphic_01_divergence_meter_75_FINAL.png"
+                  alt="BinahSigma Divergence Meter showing 73% bias delta"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+                  <p className="text-sm text-white font-semibold">BinahSigma Divergence Meter</p>
+                  <p className="text-xs text-slate-300">73% civilizational bias detected</p>
+                </div>
+              </div>
+              <div className="relative aspect-video rounded-xl overflow-hidden border border-emerald-500/20 bg-slate-800/50">
+                <img
+                  src="/images/tikun/graphic_02_decision_flow_FINAL.png"
+                  alt="Decision Flow showing conditional approval"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+                  <p className="text-sm text-white font-semibold">Decision Flow Analysis</p>
+                  <p className="text-xs text-slate-300">Conditional approval with safeguards</p>
+                </div>
+              </div>
+              <div className="relative aspect-video rounded-xl overflow-hidden border border-blue-500/20 bg-slate-800/50">
+                <img
+                  src="/images/tikun/03_west_blind_spots.png"
+                  alt="Western AI Blind Spots Analysis"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+                  <p className="text-sm text-white font-semibold">Western AI Blind Spots</p>
+                  <p className="text-xs text-slate-300">6 cultural assumptions identified</p>
+                </div>
+              </div>
+              <div className="relative aspect-video rounded-xl overflow-hidden border border-amber-500/20 bg-slate-800/50">
+                <img
+                  src="/images/tikun/04_east_blind_spots.png"
+                  alt="Eastern AI Blind Spots Analysis"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+                  <p className="text-sm text-white font-semibold">Eastern AI Blind Spots</p>
+                  <p className="text-xs text-slate-300">8 value divergences detected</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Console Screenshots */}
+            <div className="mt-8 grid md:grid-cols-3 gap-4">
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-emerald-500/20 bg-slate-800/50">
+                <img
+                  src="/images/tikun/binahsigma.png"
+                  alt="BinahSigma Console Output"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-2 bg-slate-900/90">
+                  <p className="text-xs text-emerald-400 font-mono">BinahSigma Engine</p>
+                </div>
+              </div>
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-emerald-500/20 bg-slate-800/50">
+                <img
+                  src="/images/tikun/07b_sefirah_metrics.png"
+                  alt="Sefirah Metrics Dashboard"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-2 bg-slate-900/90">
+                  <p className="text-xs text-emerald-400 font-mono">Sefirah Metrics</p>
+                </div>
+              </div>
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-purple-500/20 bg-slate-800/50">
+                <img
+                  src="/images/tikun/02_decision_conditional_go.png"
+                  alt="Conditional Decision Output"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-2 bg-slate-900/90">
+                  <p className="text-xs text-purple-400 font-mono">Decision Output</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Metrics Grid */}
@@ -237,14 +355,106 @@ Output: Ethical Decision + Audit Trail`}
             {/* 10-Sefirot Pipeline */}
             <section className="mb-16">
               <h2 className="text-3xl font-display font-bold text-white mb-6">
-                The 10-Sefirot Pipeline
+                The 10-Sefirot Pipeline Architecture
               </h2>
 
-              <p className="text-slate-300 mb-6">
+              <p className="text-slate-300 mb-8">
                 Instead of collapsing ethics into a single objective function, Tikun Olam models ethical reasoning
                 as a <strong className="text-emerald-400">10-stage process</strong> inspired by the Kabbalistic Tree of Life.
+                Each module represents a distinct cognitive function in ethical decision-making.
               </p>
 
+              {/* Visual Tree Architecture Diagram */}
+              <div className="p-8 bg-gradient-to-b from-slate-800/50 to-slate-900/50 border border-emerald-500/30 rounded-2xl mb-8">
+                <h3 className="text-xl font-semibold text-center text-emerald-400 mb-8">Tree of Life - Computational Architecture</h3>
+
+                <div className="relative max-w-3xl mx-auto">
+                  {/* Row 1: Keter */}
+                  <div className="flex justify-center mb-6">
+                    <div className="w-36 p-4 bg-gradient-to-br from-white/10 to-white/5 border border-white/30 rounded-xl text-center">
+                      <div className="text-white font-bold">Keter</div>
+                      <div className="text-xs text-slate-400">Crown</div>
+                      <div className="text-xs text-emerald-400 mt-1">Alignment Validation</div>
+                    </div>
+                  </div>
+
+                  {/* Row 2: Chochmah - Binah */}
+                  <div className="flex justify-center gap-24 mb-6">
+                    <div className="w-36 p-4 bg-gradient-to-br from-blue-500/10 to-blue-500/5 border border-blue-500/30 rounded-xl text-center">
+                      <div className="text-blue-400 font-bold">Chochmah</div>
+                      <div className="text-xs text-slate-400">Wisdom</div>
+                      <div className="text-xs text-blue-300 mt-1">Precedent Analysis</div>
+                    </div>
+                    <div className="w-36 p-4 bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 border border-cyan-500/30 rounded-xl text-center">
+                      <div className="text-cyan-400 font-bold">Binah</div>
+                      <div className="text-xs text-slate-400">Understanding</div>
+                      <div className="text-xs text-cyan-300 mt-1">BinahSigma Engine</div>
+                    </div>
+                  </div>
+
+                  {/* Row 3: Chesed - Gevurah */}
+                  <div className="flex justify-center gap-24 mb-6">
+                    <div className="w-36 p-4 bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 border border-emerald-500/30 rounded-xl text-center">
+                      <div className="text-emerald-400 font-bold">Chesed</div>
+                      <div className="text-xs text-slate-400">Kindness</div>
+                      <div className="text-xs text-emerald-300 mt-1">Opportunity ID</div>
+                    </div>
+                    <div className="w-36 p-4 bg-gradient-to-br from-red-500/10 to-red-500/5 border border-red-500/30 rounded-xl text-center">
+                      <div className="text-red-400 font-bold">Gevurah</div>
+                      <div className="text-xs text-slate-400">Strength</div>
+                      <div className="text-xs text-red-300 mt-1">Risk Assessment</div>
+                    </div>
+                  </div>
+
+                  {/* Row 4: Tiferet (Center) */}
+                  <div className="flex justify-center mb-6">
+                    <div className="w-40 p-4 bg-gradient-to-br from-yellow-500/10 to-yellow-500/5 border-2 border-yellow-500/50 rounded-xl text-center">
+                      <div className="text-yellow-400 font-bold">Tiferet</div>
+                      <div className="text-xs text-slate-400">Beauty</div>
+                      <div className="text-xs text-yellow-300 mt-1">Balanced Synthesis</div>
+                    </div>
+                  </div>
+
+                  {/* Row 5: Netzach - Hod */}
+                  <div className="flex justify-center gap-24 mb-6">
+                    <div className="w-36 p-4 bg-gradient-to-br from-green-500/10 to-green-500/5 border border-green-500/30 rounded-xl text-center">
+                      <div className="text-green-400 font-bold">Netzach</div>
+                      <div className="text-xs text-slate-400">Victory</div>
+                      <div className="text-xs text-green-300 mt-1">Strategic Planning</div>
+                    </div>
+                    <div className="w-36 p-4 bg-gradient-to-br from-orange-500/10 to-orange-500/5 border border-orange-500/30 rounded-xl text-center">
+                      <div className="text-orange-400 font-bold">Hod</div>
+                      <div className="text-xs text-slate-400">Splendor</div>
+                      <div className="text-xs text-orange-300 mt-1">Communication</div>
+                    </div>
+                  </div>
+
+                  {/* Row 6: Yesod */}
+                  <div className="flex justify-center mb-6">
+                    <div className="w-36 p-4 bg-gradient-to-br from-purple-500/10 to-purple-500/5 border border-purple-500/30 rounded-xl text-center">
+                      <div className="text-purple-400 font-bold">Yesod</div>
+                      <div className="text-xs text-slate-400">Foundation</div>
+                      <div className="text-xs text-purple-300 mt-1">Integration</div>
+                    </div>
+                  </div>
+
+                  {/* Row 7: Malchut */}
+                  <div className="flex justify-center">
+                    <div className="w-40 p-4 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 border-2 border-emerald-500/50 rounded-xl text-center">
+                      <div className="text-emerald-400 font-bold">Malchut</div>
+                      <div className="text-xs text-slate-400">Kingdom</div>
+                      <div className="text-xs text-emerald-300 mt-1">Final Decision</div>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-center text-slate-400 text-sm mt-8">
+                  Data flows from Keter (highest abstraction) down to Malchut (concrete decision),
+                  with each sefirah performing a distinct ethical function.
+                </p>
+              </div>
+
+              {/* Detailed Table */}
               <div className="overflow-x-auto mb-8">
                 <table className="w-full text-sm">
                   <thead>
@@ -343,24 +553,30 @@ Output: Ethical Decision + Audit Trail`}
                 </p>
               </div>
 
-              {/* Download Results */}
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="/downloads/tikun_nvidia_groq_analysis.json"
-                  download
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg hover:border-emerald-500/50 transition-colors text-sm"
-                >
-                  <Download className="w-4 h-4 text-emerald-400" />
-                  Download Full JSON (136KB)
-                </a>
-                <a
-                  href="/downloads/tikun_nvidia_groq_summary.txt"
-                  download
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg hover:border-emerald-500/50 transition-colors text-sm"
-                >
-                  <Download className="w-4 h-4 text-emerald-400" />
-                  Download Summary (TXT)
-                </a>
+              {/* Download Results - Enhanced Visibility */}
+              <div className="p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border-2 border-dashed border-emerald-500/50 rounded-xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <Download className="w-6 h-6 text-emerald-400" />
+                  <span className="text-lg font-semibold text-white">Download Complete Analysis</span>
+                </div>
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href="/downloads/tikun_nvidia_groq_analysis.json"
+                    download
+                    className="inline-flex items-center gap-3 px-5 py-3 bg-emerald-500/20 border-2 border-emerald-500/50 rounded-lg hover:bg-emerald-500/30 transition-all text-emerald-400 font-medium"
+                  >
+                    <FileJson className="w-5 h-5" />
+                    Full JSON Analysis (136KB)
+                  </a>
+                  <a
+                    href="/downloads/tikun_nvidia_groq_summary.txt"
+                    download
+                    className="inline-flex items-center gap-3 px-5 py-3 bg-cyan-500/20 border-2 border-cyan-500/50 rounded-lg hover:bg-cyan-500/30 transition-all text-cyan-400 font-medium"
+                  >
+                    <FileText className="w-5 h-5" />
+                    Executive Summary (TXT)
+                  </a>
+                </div>
               </div>
             </section>
 

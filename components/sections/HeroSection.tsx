@@ -98,7 +98,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <Link href="/contact" className="group btn-primary">
+          <a href="https://cal.com/desarrollo-marketing-y-tecnologia-lqmiht" target="_blank" rel="noopener noreferrer" className="group btn-primary">
             <Calendar className="w-5 h-5" />
             Schedule a Strategy Call
             <motion.span
@@ -108,9 +108,9 @@ export default function HeroSection() {
             >
               →
             </motion.span>
-          </Link>
+          </a>
           <a
-            href="https://tikunolam-mmwy8fmm.manus.space/"
+            href="https://tikun.pro"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary flex items-center gap-2"

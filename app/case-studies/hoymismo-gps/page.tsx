@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { ArrowLeft, ExternalLink, MapPin, Wifi, Server, Clock, Activity } from 'lucide-react'
+import { ArrowLeft, ExternalLink, MapPin, Wifi, Server, Clock, Activity, Image as ImageIcon } from 'lucide-react'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
@@ -70,6 +70,49 @@ export default function HoyMismoGPSCaseStudy() {
               ></iframe>
             </div>
             <p className="text-sm text-slate-400 mt-2 text-center">Dashboard de rastreo en tiempo real con Mapbox GL</p>
+          </div>
+
+          {/* Platform Screenshots */}
+          <div className="mb-12">
+            <div className="flex items-center gap-3 mb-6">
+              <ImageIcon className="w-6 h-6 text-cyan-400" />
+              <h3 className="text-2xl font-bold text-white">Platform Interface</h3>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="relative aspect-video rounded-xl overflow-hidden border border-cyan-500/20 bg-slate-800/50">
+                <img
+                  src="/images/hoymismo/interfaz.png"
+                  alt="HoyMismoGPS User Interface"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+                  <p className="text-sm text-white font-semibold">Main Dashboard</p>
+                  <p className="text-xs text-slate-300">Complete fleet overview</p>
+                </div>
+              </div>
+              <div className="relative aspect-video rounded-xl overflow-hidden border border-cyan-500/20 bg-slate-800/50">
+                <img
+                  src="/images/hoymismo/rastreo.png"
+                  alt="HoyMismoGPS Unit Tracking"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+                  <p className="text-sm text-white font-semibold">Unit Tracking</p>
+                  <p className="text-xs text-slate-300">Individual vehicle monitoring</p>
+                </div>
+              </div>
+              <div className="relative aspect-video rounded-xl overflow-hidden border border-cyan-500/20 bg-slate-800/50">
+                <img
+                  src="/images/hoymismo/vehiculos.png"
+                  alt="HoyMismoGPS Live Vehicles"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-slate-900 to-transparent">
+                  <p className="text-sm text-white font-semibold">Live Vehicles</p>
+                  <p className="text-xs text-slate-300">Real-time position updates</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Metrics Grid */}
