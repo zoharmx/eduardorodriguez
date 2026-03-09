@@ -23,6 +23,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 'openai-sam-altman-board-tikun-analysis',
+    title: "When OpenAI's Board Considers Firing Sam Altman (Again): AI Sees What Humans Miss",
+    excerpt: "We ran the OpenAI board vs. Altman dilemma through Tikun Olam's ethical framework. The result: 3 power dynamics nobody discusses — the Microsoft Illusion, Safety Theater, and the Precedent of Rewarded Recklessness — plus 3 creative solutions that go beyond the obvious fire/keep binary. Full analysis in 8 minutes.",
+    category: 'AI Ethics',
+    date: '2026-03-08',
+    readTime: '12 min read',
+    featured: true,
+    icon: <Brain className="w-6 h-6" />,
+    tags: ['OpenAI', 'Sam Altman', 'Tikun Olam', 'AI Governance', 'Power Analysis'],
+  },
+  {
     id: 'vocalis-v3-multi-agent',
     title: 'VocalisAI V3: When Every Call Gets Its Own AI Team',
     excerpt: 'How we went from a single voice bot to a full multi-agent orchestration platform with Akiva as meta-agent supervisor, 6 specialized agents, and TOF ethical layer on every call. The architecture decisions, the Google Gemini Live API integration, and why ethics-by-default changes everything.',
