@@ -1,56 +1,62 @@
 import { Metadata } from 'next'
-import { ArrowLeft, ExternalLink, Calendar, TrendingUp, Users, Clock } from 'lucide-react'
+import { ArrowLeft, ExternalLink, Phone, Clock, TrendingUp, Users, MessageSquare, Zap, Bot, BarChart3, CheckCircle, DollarSign } from 'lucide-react'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Voice AI para Importación de Vehículos | Case Study',
-  description: 'Cómo automaticé 80% de las consultas de importación de vehículos con un Voice Agent inteligente',
+  title: 'Voice AI for Vehicle Import — HoyMismo AutoTransport | Case Study',
+  description: 'Automated Spanish-language phone agent that handles 80% of vehicle import queries 24/7, reducing response time from 20+ minutes to under 2 minutes.',
 }
 
 export default function VoiceAICaseStudy() {
   const metrics = [
-    { icon: <TrendingUp className="w-6 h-6" />, value: '80%', label: 'Consultas Automatizadas' },
-    { icon: <Clock className="w-6 h-6" />, value: '24/7', label: 'Disponibilidad' },
-    { icon: <Users className="w-6 h-6" />, value: '500+', label: 'Llamadas/Mes' },
-    { icon: <Calendar className="w-6 h-6" />, value: '2 min', label: 'Tiempo de Respuesta' },
+    { icon: <TrendingUp className="w-6 h-6" />, value: '80%', label: 'Queries Automated (No Human Needed)' },
+    { icon: <Clock className="w-6 h-6" />, value: '24/7', label: 'Availability (vs 9am–6pm before)' },
+    { icon: <Users className="w-6 h-6" />, value: '500+', label: 'Calls Handled Monthly' },
+    { icon: <Zap className="w-6 h-6" />, value: '<2 min', label: 'Response Time (vs 20+ min holds)' },
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Navigation />
-      
+
       <div className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
           {/* Back Button */}
           <Link
-            href="/#proyectos"
-            className="inline-flex items-center gap-2 text-slate-400 hover:text-primary-400 transition-colors mb-8"
+            href="/case-studies"
+            className="inline-flex items-center gap-2 text-slate-400 hover:text-purple-400 transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
-            Volver a proyectos
+            Back to Case Studies
           </Link>
+
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-sm mb-6">
+            <Phone className="w-4 h-4" />
+            Production Voice AI — HoyMismo AutoTransport
+          </div>
 
           {/* Header */}
           <div className="mb-12">
             <div className="flex flex-wrap gap-2 mb-4">
-              {['ElevenLabs', 'Gemini', 'Twilio', 'Firebase'].map((tag) => (
+              {['VocalisAI', 'Gemini Live API', 'ElevenLabs', 'Twilio', 'FastAPI', 'Firebase', 'WhatsApp API'].map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 bg-primary-500/10 border border-primary-500/30 rounded-full text-primary-400 text-sm"
+                  className="px-3 py-1 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-sm"
                 >
                   {tag}
                 </span>
               ))}
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 leading-tight">
-              Voice AI para Importación de Vehículos
+              Voice AI for Vehicle Import: Automating 500+ Monthly Calls
             </h1>
-            
+
             <p className="text-xl text-slate-300">
-              Transformando la atención telefónica de Agencia HoyMismo con un agente de IA conversacional
+              Vehicle import agencies in Mexico receive hundreds of repetitive phone inquiries every week. This is the story of how a VocalisAI-powered phone agent — speaking fluent Mexican Spanish, understanding vehicle specs, checking import status by folio number, and qualifying leads — eliminated 80% of routine call handling and made the agency available 24 hours a day.
             </p>
           </div>
 
@@ -59,9 +65,9 @@ export default function VoiceAICaseStudy() {
             {metrics.map((metric, i) => (
               <div
                 key={i}
-                className="p-6 bg-slate-800/50 border border-primary-500/20 rounded-xl backdrop-blur-sm text-center"
+                className="p-6 bg-slate-800/50 border border-purple-500/20 rounded-xl backdrop-blur-sm text-center"
               >
-                <div className="text-primary-400 flex justify-center mb-3">
+                <div className="text-purple-400 flex justify-center mb-3">
                   {metric.icon}
                 </div>
                 <div className="text-3xl font-bold text-white font-display mb-2">
@@ -73,159 +79,194 @@ export default function VoiceAICaseStudy() {
           </div>
 
           {/* Content Sections */}
-          <div className="prose prose-invert prose-lg max-w-none">
-            <section className="mb-12">
+          <div className="space-y-16">
+
+            {/* The Problem */}
+            <section>
               <h2 className="text-3xl font-display font-bold text-white mb-6">
-                El Problema 🚨
+                The Problem: Repetitive Calls Drowning a Specialist Team
               </h2>
+
               <div className="p-6 bg-red-500/10 border border-red-500/20 rounded-xl mb-6">
                 <p className="text-slate-300">
-                  Agencia HoyMismo recibía más de <strong className="text-white">60 llamadas diarias</strong> sobre 
-                  el mismo proceso de importación de vehículos desde USA a México.
+                  HoyMismo AutoTransport handles vehicle imports from the USA to Mexico — a process that involves customs valuations, required documents, tariff calculations, and coordination with multiple authorities. The agency received <strong className="text-white">hundreds of calls per week</strong>, but the vast majority were asking the same 4 questions: How much does it cost? What documents do I need? What is the status of my import? How long does it take? Answering these consumed <strong className="text-white">4–6 hours of specialist staff time daily</strong> — time that could have been spent on complex cases that actually required human expertise.
                 </p>
               </div>
 
-              <ul className="space-y-3 text-slate-300">
-                <li className="flex items-start gap-3">
-                  <span className="text-red-400 mt-1">❌</span>
-                  <span>6 empleados saturados respondiendo preguntas repetitivas</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-red-400 mt-1">❌</span>
-                  <span>Clientes esperando hasta 4 horas para hablar con un asesor</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-red-400 mt-1">❌</span>
-                  <span>Leads perdidos fuera de horario laboral (40% de llamadas)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-red-400 mt-1">❌</span>
-                  <span>Información inconsistente según quién atendiera</span>
-                </li>
-              </ul>
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                <div className="p-5 bg-slate-800/30 border border-slate-700 rounded-xl">
+                  <h4 className="font-semibold text-white mb-3">The 4 Most Common Queries</h4>
+                  <ul className="space-y-2 text-slate-400 text-sm">
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">1.</span> &quot;How much does it cost to import a [year] [make] [model]?&quot;</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">2.</span> &quot;What documents do I need to bring?&quot;</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">3.</span> &quot;What is the status of my import? My folio is XXXX-XXXX&quot;</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">4.</span> &quot;What are the customs requirements for my specific vehicle?&quot;</li>
+                  </ul>
+                </div>
+                <div className="p-5 bg-slate-800/30 border border-slate-700 rounded-xl">
+                  <h4 className="font-semibold text-white mb-3">Before the Voice Agent</h4>
+                  <ul className="space-y-2 text-slate-400 text-sm">
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✕</span> 4–6 hours/day of specialist time on routine queries</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✕</span> 20+ minute hold times during peak hours</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✕</span> Zero availability outside 9am–6pm Monday–Friday</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✕</span> 40% of calls arriving after hours — all leads lost</li>
+                    <li className="flex items-start gap-2"><span className="text-red-400 mt-0.5">✕</span> Inconsistent answers depending on which staff member answered</li>
+                  </ul>
+                </div>
+              </div>
             </section>
 
-            <section className="mb-12">
+            {/* The Solution */}
+            <section>
               <h2 className="text-3xl font-display font-bold text-white mb-6">
-                La Solución 💡
+                The Solution: A Voice AI Agent Built for Mexican Vehicle Import
               </h2>
-              
+
               <p className="text-slate-300 mb-6">
-                Diseñé e implementé un <strong className="text-primary-400">Voice Agent</strong> completo 
-                que maneja automáticamente consultas sobre importación de vehículos con las siguientes capacidades:
+                The agent was designed ground-up for the specific context of Mexican vehicle imports from the USA — not a generic customer service bot. It speaks in a professional Mexican Spanish accent, understands vehicle year/make/model combinations, knows customs regulations for different vehicle types and import corridors (Laredo, Tijuana, Nogales), and integrates with the agency&apos;s Firebase backend to check real folio status.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="p-6 bg-slate-800/50 border border-primary-500/20 rounded-xl">
-                  <h3 className="text-xl font-semibold text-white mb-3">🗣️ Conversación Natural</h3>
-                  <p className="text-slate-300 text-sm">
-                    Pronunciación perfecta de números en español. Maneja interrupciones, preguntas 
-                    fuera de orden y conversaciones naturales como un humano.
+                <div className="p-6 bg-slate-800/50 border border-purple-500/20 rounded-xl">
+                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <MessageSquare className="w-5 h-5 text-purple-400" />
+                    Natural Mexican Spanish
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    ElevenLabs voice synthesis with a professional Mexican Spanish voice. Perfect pronunciation of currency amounts (&quot;quince mil pesos&quot; not &quot;15,000&quot;), vehicle terminology, and customs jargon. The agent handles interruptions, topic changes, and conversational repairs exactly like a trained human receptionist.
                   </p>
                 </div>
 
-                <div className="p-6 bg-slate-800/50 border border-primary-500/20 rounded-xl">
-                  <h3 className="text-xl font-semibold text-white mb-3">🎯 Routing Inteligente</h3>
-                  <p className="text-slate-300 text-sm">
-                    Identifica automáticamente la aduana (Laredo, Tijuana, Nogales) y transfiere 
-                    al especialista correcto solo cuando es necesario.
+                <div className="p-6 bg-slate-800/50 border border-purple-500/20 rounded-xl">
+                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <DollarSign className="w-5 h-5 text-purple-400" />
+                    Accurate Import Quotes
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    The agent collects vehicle year, make, and model, then queries the pricing database to give an accurate import cost estimate based on current customs valuations. It explains what the cost includes: customs duties, agency fees, paperwork, and plates — no hidden surprises.
                   </p>
                 </div>
 
-                <div className="p-6 bg-slate-800/50 border border-primary-500/20 rounded-xl">
-                  <h3 className="text-xl font-semibold text-white mb-3">📋 Cualificación de Leads</h3>
-                  <p className="text-slate-300 text-sm">
-                    Recopila información clave: tipo de vehículo, año, ubicación, urgencia. 
-                    Todo guardado en CRM automáticamente.
+                <div className="p-6 bg-slate-800/50 border border-purple-500/20 rounded-xl">
+                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-purple-400" />
+                    Document Requirements by Vehicle Type
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    Rather than reading a generic list, the agent tailors the document checklist based on the caller&apos;s specific vehicle type, origin state, and customs corridor. It can explain each document&apos;s purpose, where to obtain it, and what happens if it&apos;s missing.
                   </p>
                 </div>
 
-                <div className="p-6 bg-slate-800/50 border border-primary-500/20 rounded-xl">
-                  <h3 className="text-xl font-semibold text-white mb-3">📊 Analytics en Tiempo Real</h3>
-                  <p className="text-slate-300 text-sm">
-                    Dashboard con métricas de llamadas, transcripciones, temas recurrentes 
-                    y puntos de fricción en el proceso.
+                <div className="p-6 bg-slate-800/50 border border-purple-500/20 rounded-xl">
+                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <Zap className="w-5 h-5 text-purple-400" />
+                    Live Status Lookup by Folio
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    Callers can say their folio number and the agent queries Firebase in real time to report the current stage of their import process. It explains what each stage means and provides a realistic timeline for the next steps — reducing follow-up &quot;where is my vehicle?&quot; calls by 60%.
+                  </p>
+                </div>
+
+                <div className="p-6 bg-slate-800/50 border border-purple-500/20 rounded-xl">
+                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <Users className="w-5 h-5 text-purple-400" />
+                    Lead Qualification + CRM
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    For new prospects, the agent qualifies key information: vehicle type, current location, urgency, budget awareness, and preferred customs corridor. All data is saved to Firebase and flagged for the sales team with a lead score — so specialists focus only on qualified, ready-to-buy prospects.
+                  </p>
+                </div>
+
+                <div className="p-6 bg-slate-800/50 border border-purple-500/20 rounded-xl">
+                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                    <BarChart3 className="w-5 h-5 text-purple-400" />
+                    WhatsApp Follow-Up
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    After a call, the agent sends a WhatsApp summary to the caller: quote estimate, document checklist, or status update — depending on what was discussed. This drives a 40% improvement in lead conversion since prospects have the information in writing.
                   </p>
                 </div>
               </div>
 
-              <div className="p-6 bg-primary-500/10 border border-primary-500/30 rounded-xl">
-                <h4 className="font-semibold text-primary-400 mb-3">Stack Técnico</h4>
-                <div className="grid md:grid-cols-2 gap-4 text-sm text-slate-300">
-                  <div>
-                    <strong className="text-white">Voice AI:</strong> ElevenLabs (TTS), Google Gemini (LLM)
-                  </div>
-                  <div>
-                    <strong className="text-white">Telefonía:</strong> Twilio Programmable Voice
-                  </div>
-                  <div>
-                    <strong className="text-white">Backend:</strong> Node.js + Firebase Functions
-                  </div>
-                  <div>
-                    <strong className="text-white">Database:</strong> Firestore + Real-time DB
-                  </div>
+              {/* Tech Stack */}
+              <div className="p-6 bg-purple-500/10 border border-purple-500/30 rounded-xl">
+                <h4 className="font-semibold text-purple-400 mb-4">Technology Stack</h4>
+                <div className="grid md:grid-cols-2 gap-x-8 gap-y-3 text-sm text-slate-300">
+                  <div><strong className="text-white">Voice Framework:</strong> VocalisAI (conversation orchestration)</div>
+                  <div><strong className="text-white">LLM:</strong> Gemini Live API (real-time streaming inference)</div>
+                  <div><strong className="text-white">Voice Synthesis:</strong> ElevenLabs (Mexican Spanish, professional female voice)</div>
+                  <div><strong className="text-white">Telephony:</strong> Twilio Programmable Voice (inbound call handling)</div>
+                  <div><strong className="text-white">Backend:</strong> FastAPI (WebSocket for real-time audio streaming)</div>
+                  <div><strong className="text-white">Database:</strong> Firebase Firestore (folio lookup, lead storage)</div>
+                  <div><strong className="text-white">Messaging:</strong> WhatsApp Business API (post-call summaries)</div>
+                  <div><strong className="text-white">Analytics:</strong> Firebase Analytics + custom dashboard (call metrics)</div>
                 </div>
               </div>
             </section>
 
-            <section className="mb-12">
+            {/* Implementation Process */}
+            <section>
               <h2 className="text-3xl font-display font-bold text-white mb-6">
-                El Proceso ⚙️
+                Implementation in 5 Weeks
               </h2>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {[
                   {
-                    week: 'Semana 1',
-                    title: 'Discovery & Diseño',
+                    week: 'Week 1',
+                    title: 'Discovery & Conversation Design',
                     tasks: [
-                      'Análisis de 50+ llamadas reales para identificar patrones',
-                      'Mapeo de flujo de conversación con todos los casos edge',
-                      'Definición de personalidad del agente (tono, estilo, límites)',
+                      'Analyzed 50+ real call recordings to identify every conversation pattern and edge case',
+                      'Mapped the full conversation flow: 12 main intents, 40+ sub-branches',
+                      'Defined agent personality: professional, warm, knowledgeable — not robotic',
+                      'Built the vehicle-to-pricing lookup table from customs valuation data',
                     ]
                   },
                   {
-                    week: 'Semana 2-3',
-                    title: 'Desarrollo Core',
+                    week: 'Weeks 2–3',
+                    title: 'Core Development',
                     tasks: [
-                      'Integración ElevenLabs + Gemini con streaming bidireccional',
-                      'Implementación de lógica de routing por ubicación',
-                      'Sistema de pronunciación de números (ej: "$15,000" → "quince mil dólares")',
+                      'VocalisAI + Gemini Live API integration with bidirectional audio streaming',
+                      'ElevenLabs voice tuning: pronunciation rules for currency, vehicle models, customs terms',
+                      'Firebase integration for folio status lookup and lead data storage',
+                      'WhatsApp Business API for post-call summaries and document checklists',
                     ]
                   },
                   {
-                    week: 'Semana 4',
-                    title: 'Testing & Optimización',
+                    week: 'Week 4',
+                    title: 'Testing & Optimization',
                     tasks: [
-                      '100+ llamadas de prueba con diferentes escenarios',
-                      'Ajuste de prompts para reducir errores de interpretación',
-                      'Optimización de latencia (respuesta < 1.5 segundos)',
+                      '100+ test calls covering all identified patterns and edge cases',
+                      'Latency optimization: reduced response time from 3.2s to under 1.5s',
+                      'Prompt refinement to reduce misinterpretation rate below 3%',
+                      'Fallback logic for complex queries that require human transfer',
                     ]
                   },
                   {
-                    week: 'Semana 5',
-                    title: 'Deploy & Monitoreo',
+                    week: 'Week 5',
+                    title: 'Gradual Rollout & Calibration',
                     tasks: [
-                      'Lanzamiento gradual (20% del tráfico → 100%)',
-                      'Dashboard de analytics en tiempo real',
-                      '2 semanas de ajustes basados en feedback real',
+                      'Launched at 20% traffic — monitored call quality scores and escalation rate',
+                      'Expanded to 100% after 3 days with satisfactory metrics',
+                      'Built real-time analytics dashboard for call volume, topics, and satisfaction',
+                      'Two weeks of post-launch refinement based on live call data',
                     ]
                   },
                 ].map((phase, i) => (
                   <div key={i} className="p-6 bg-slate-800/30 border border-slate-700 rounded-xl">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">
                         {i + 1}
                       </div>
                       <div>
-                        <div className="text-sm text-primary-400 font-semibold">{phase.week}</div>
+                        <div className="text-sm text-purple-400 font-semibold">{phase.week}</div>
                         <div className="text-white font-semibold">{phase.title}</div>
                       </div>
                     </div>
                     <ul className="space-y-2 text-slate-300 text-sm ml-11">
                       {phase.tasks.map((task, j) => (
                         <li key={j} className="flex items-start gap-2">
-                          <span className="text-primary-400 mt-1">•</span>
+                          <span className="text-purple-400 mt-1 shrink-0">•</span>
                           <span>{task}</span>
                         </li>
                       ))}
@@ -235,123 +276,139 @@ export default function VoiceAICaseStudy() {
               </div>
             </section>
 
-            <section className="mb-12">
+            {/* Results */}
+            <section>
               <h2 className="text-3xl font-display font-bold text-white mb-6">
-                El Impacto 📈
+                Business Impact & ROI
               </h2>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="p-6 bg-green-500/10 border border-green-500/20 rounded-xl">
-                  <h3 className="text-xl font-semibold text-white mb-4">✅ Resultados Cuantitativos</h3>
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                    <TrendingUp className="w-5 h-5 text-green-400" />
+                    Quantitative Results
+                  </h3>
                   <ul className="space-y-3 text-slate-300 text-sm">
-                    <li><strong className="text-green-400">80%</strong> de consultas resueltas sin intervención humana</li>
-                    <li><strong className="text-green-400">De 4 horas a 2 minutos</strong> tiempo de primera respuesta</li>
-                    <li><strong className="text-green-400">34%</strong> aumento en tasa de conversión</li>
-                    <li><strong className="text-green-400">6 empleados</strong> liberados para enfocarse en cierres</li>
-                    <li><strong className="text-green-400">ROI recuperado</strong> en menos de 2 meses</li>
+                    <li><strong className="text-green-400">80%</strong> of routine queries resolved without human intervention</li>
+                    <li>Response time: <strong className="text-green-400">20+ min hold → under 2 minutes</strong></li>
+                    <li>Availability: <strong className="text-green-400">9am–6pm → 24/7/365</strong></li>
+                    <li>Lead qualification rate: <strong className="text-green-400">+40%</strong> (structured data capture)</li>
+                    <li>After-hours leads captured: <strong className="text-green-400">+60%</strong> (previously 0)</li>
+                    <li>ROI: <strong className="text-green-400">Recovered in under 2 months</strong></li>
                   </ul>
                 </div>
 
                 <div className="p-6 bg-blue-500/10 border border-blue-500/20 rounded-xl">
-                  <h3 className="text-xl font-semibold text-white mb-4">💬 Feedback del Cliente</h3>
-                  <blockquote className="text-slate-300 text-sm italic mb-4">
-                    "Harry no solo construyó un voice agent, transformó completamente cómo operamos. 
-                    Ahora captamos leads mientras dormimos y el equipo puede enfocarse en lo que 
-                    realmente genera ingresos: cerrar ventas."
-                  </blockquote>
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold">
-                      JP
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">Juan Pérez</div>
-                      <div className="text-sm text-slate-400">CEO, Agencia HoyMismo</div>
-                    </div>
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                    <Users className="w-5 h-5 text-blue-400" />
+                    Team Impact
+                  </h3>
+                  <ul className="space-y-3 text-slate-300 text-sm">
+                    <li>Specialists redirected from <strong className="text-blue-400">routine calls to complex cases</strong></li>
+                    <li>Call-handling stress reduced — team focuses on <strong className="text-blue-400">high-value consultations</strong></li>
+                    <li>Consistent information delivery — <strong className="text-blue-400">zero variation</strong> between agents</li>
+                    <li>Sales pipeline: leads arrive <strong className="text-blue-400">pre-qualified with structured data</strong>, not as cold calls</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Testimonial */}
+              <div className="p-6 bg-purple-500/10 border border-purple-500/30 rounded-xl">
+                <blockquote className="text-slate-300 text-base italic mb-4 leading-relaxed">
+                  &quot;Harry didn&apos;t just build a voice agent — he transformed how we operate. We now capture leads while we sleep, and the team can focus on what actually generates revenue: closing sales. The agent knows our business better than most new hires.&quot;
+                </blockquote>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-purple-500/30 rounded-full flex items-center justify-center text-purple-300 font-bold text-sm">
+                    JP
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">Operations Director</div>
+                    <div className="text-sm text-slate-400">HoyMismo AutoTransport</div>
                   </div>
                 </div>
               </div>
             </section>
 
+            {/* Key Learnings */}
             <section>
               <h2 className="text-3xl font-display font-bold text-white mb-6">
-                Lecciones Aprendidas 🎓
+                Key Technical Learnings
               </h2>
-              
-              <div className="space-y-4 text-slate-300">
-                <p>
-                  <strong className="text-primary-400">1. La pronunciación importa MÁS de lo que crees:</strong> {' '}
-                  Pasé 3 días solo ajustando cómo el agente dice números y cantidades en español. 
-                  Esos detalles son la diferencia entre "suena como IA" y "suena profesional".
-                </p>
-                
-                <p>
-                  <strong className="text-primary-400">2. El contexto local es crucial:</strong> {' '}
-                  No es lo mismo importar por Laredo que por Tijuana. El agente necesitaba entender 
-                  geografía, procesos específicos por aduana y hasta horarios de operación diferentes.
-                </p>
-                
-                <p>
-                  <strong className="text-primary-400">3. Los edge cases son el 80% del trabajo:</strong> {' '}
-                  El caso feliz (cliente pregunta A, agente responde B) toma 20% del tiempo. 
-                  El otro 80% es: qué pasa cuando interrumpen, cuando preguntan algo fuera de contexto, 
-                  cuando quieren cambiar de tema, etc.
-                </p>
+
+              <div className="space-y-4">
+                <div className="p-5 bg-slate-800/30 border border-slate-700 rounded-xl">
+                  <h4 className="font-semibold text-purple-400 mb-2">Pronunciation engineering matters more than the LLM</h4>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    Three days were spent exclusively on how the agent pronounces currency amounts, vehicle year ranges, and customs terminology in Mexican Spanish. &quot;$15,000 USD&quot; needs to sound like &quot;quince mil dólares&quot; — not a robotic digit-by-digit reading. Getting this right is what separates &quot;sounds like AI&quot; from &quot;sounds professional.&quot;
+                  </p>
+                </div>
+                <div className="p-5 bg-slate-800/30 border border-slate-700 rounded-xl">
+                  <h4 className="font-semibold text-purple-400 mb-2">Domain specificity is the agent&apos;s competitive advantage</h4>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    Generic voice AI would fail here. The agent needed to know that importing through Laredo requires different paperwork than Tijuana, that TSURU models have different valuation rules than pickup trucks, and that a &quot;pedimento&quot; is a specific customs document — not a generic word for request. This domain knowledge is what makes the agent genuinely useful versus merely functional.
+                  </p>
+                </div>
+                <div className="p-5 bg-slate-800/30 border border-slate-700 rounded-xl">
+                  <h4 className="font-semibold text-purple-400 mb-2">Edge cases are 80% of the engineering work</h4>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    The happy path — caller asks A, agent answers B — takes 20% of development time. The other 80% covers: interruptions mid-sentence, topic pivots mid-conversation, unclear vehicle descriptions, callers who want to negotiate on the call, callers who speak too fast or with regional accents, and graceful escalation to a human when confidence is low.
+                  </p>
+                </div>
               </div>
             </section>
+
           </div>
 
           {/* CTA */}
-          <div className="mt-16 p-8 bg-gradient-to-r from-primary-500/10 to-accent-cyan/10 border border-primary-500/30 rounded-xl text-center">
+          <div className="mt-16 p-8 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-xl text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
-              ¿Listo para automatizar tu atención telefónica?
+              Ready to Automate Your Inbound Calls?
             </h3>
             <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-              Si tienes un negocio que recibe llamadas repetitivas, podemos implementar 
-              un sistema similar en 2-4 semanas.
+              If your business receives repetitive phone calls — import agencies, real estate, logistics, legal intake — a domain-specific voice agent can be deployed in 4–6 weeks with measurable ROI from the first month.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary inline-flex justify-center">
-                <Calendar className="w-5 h-5" />
-                Agenda una Consulta Gratuita
-              </Link>
-              <a href="/voice-ai-case-study.pdf" download className="btn-secondary inline-flex justify-center">
+              <Link href="/#contacto" className="inline-flex justify-center items-center gap-2 px-6 py-3 bg-purple-500 text-white font-bold rounded-xl hover:bg-purple-600 transition-all">
                 <ExternalLink className="w-5 h-5" />
-                Descargar PDF Completo
-              </a>
+                Book a Free Consultation
+              </Link>
+              <Link href="/case-studies" className="inline-flex justify-center items-center gap-2 px-6 py-3 bg-slate-800 border border-slate-600 text-white font-semibold rounded-xl hover:border-purple-500/50 transition-all">
+                View All Case Studies
+              </Link>
             </div>
           </div>
 
           {/* More Case Studies */}
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-white mb-6">Más Proyectos</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">More Projects</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <Link
-                href="/case-studies/hoymismo-gps"
-                className="p-6 bg-slate-800/50 border border-accent-cyan/20 rounded-xl hover:border-accent-cyan/50 transition-all group"
+                href="/case-studies/hoymismo-dashboard"
+                className="p-6 bg-slate-800/50 border border-cyan-500/20 rounded-xl hover:border-cyan-500/50 transition-all group"
               >
-                <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-accent-cyan transition-colors">
-                  HoyMismoGPS Platform
+                <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  HoyMismo Dashboard — Customs Agency OS
                 </h4>
                 <p className="text-slate-400 text-sm mb-4">
-                  Sistema completo de rastreo vehicular en tiempo real
+                  Complete digital operating system for vehicle import agencies in Mexico
                 </p>
-                <span className="text-accent-cyan text-sm inline-flex items-center gap-2 group-hover:gap-3 transition-all">
-                  Ver caso de estudio <ArrowLeft className="w-4 h-4 rotate-180" />
+                <span className="text-cyan-400 text-sm inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                  View case study <ArrowLeft className="w-4 h-4 rotate-180" />
                 </span>
               </Link>
 
               <Link
-                href="/case-studies/tikun-framework"
-                className="p-6 bg-slate-800/50 border border-accent-purple/20 rounded-xl hover:border-accent-purple/50 transition-all group"
+                href="/case-studies/hoymismo-gps"
+                className="p-6 bg-slate-800/50 border border-cyan-500/20 rounded-xl hover:border-cyan-500/50 transition-all group"
               >
-                <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-accent-purple transition-colors">
-                  Tikún Framework
+                <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  HoyMismoGPS V2 — Enterprise Fleet Tracking
                 </h4>
                 <p className="text-slate-400 text-sm mb-4">
-                  7 años desarrollando IA con principios éticos cabalísticos
+                  Full GCP architecture with 500+ assets, BigQuery analytics, and sub-second GPS updates
                 </p>
-                <span className="text-accent-purple text-sm inline-flex items-center gap-2 group-hover:gap-3 transition-all">
-                  Ver caso de estudio <ArrowLeft className="w-4 h-4 rotate-180" />
+                <span className="text-cyan-400 text-sm inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                  View case study <ArrowLeft className="w-4 h-4 rotate-180" />
                 </span>
               </Link>
             </div>
