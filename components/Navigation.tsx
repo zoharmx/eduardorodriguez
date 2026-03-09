@@ -8,6 +8,7 @@ import { Menu, X } from 'lucide-react'
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [lang, setLang] = useState<'EN' | 'ES'>('EN')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +41,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-8 text-sm">
+        <div className="hidden md:flex items-center gap-8 text-sm">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -51,15 +52,31 @@ export default function Navigation() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300" />
             </Link>
           ))}
+          <button
+            onClick={() => setLang(lang === 'EN' ? 'ES' : 'EN')}
+            className="px-3 py-1 bg-primary-500/10 border border-primary-500/30 rounded-full text-primary-400 text-xs font-semibold hover:bg-primary-500/20 hover:border-primary-500/60 transition-all"
+            aria-label="Toggle language"
+          >
+            {lang}
+          </button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-white"
-        >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Mobile: Lang toggle + Menu button */}
+        <div className="md:hidden flex items-center gap-3">
+          <button
+            onClick={() => setLang(lang === 'EN' ? 'ES' : 'EN')}
+            className="px-3 py-1 bg-primary-500/10 border border-primary-500/30 rounded-full text-primary-400 text-xs font-semibold hover:bg-primary-500/20 transition-all"
+            aria-label="Toggle language"
+          >
+            {lang}
+          </button>
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-white"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}

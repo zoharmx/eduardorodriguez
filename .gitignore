@@ -42,6 +42,11 @@ images/
 # temporary files
 tmpclaude-*
 
+# private working folders
+v2/
+DDSMarketing/
+mejoras.txt
+
 # local settings
 .claude/settings.local.json
 

@@ -23,6 +23,28 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 'vocalis-v3-multi-agent',
+    title: 'VocalisAI V3: When Every Call Gets Its Own AI Team',
+    excerpt: 'How we went from a single voice bot to a full multi-agent orchestration platform with Akiva as meta-agent supervisor, 6 specialized agents, and TOF ethical layer on every call. The architecture decisions, the Google Gemini Live API integration, and why ethics-by-default changes everything.',
+    category: 'Voice AI',
+    date: '2026-03-05',
+    readTime: '14 min read',
+    featured: true,
+    icon: <Phone className="w-6 h-6" />,
+    tags: ['VocalisAI', 'Multi-Agent', 'Gemini Live', 'TOF', 'Akiva'],
+  },
+  {
+    id: 'tikun-olam-pentagon',
+    title: 'When AI Said NO to the Pentagon: Inside Tikun Olam\'s $2.4B Ethical Analysis',
+    excerpt: 'The Anthropic vs Pentagon $2.4B contract raised a question: should AI systems help build autonomous weapons? We ran the full TOF 10-Sefirot pipeline on this case. The answer was a clear NO_GO — and here\'s exactly why the framework reached that conclusion across 5 AI providers.',
+    category: 'AI Ethics',
+    date: '2026-03-01',
+    readTime: '11 min read',
+    featured: true,
+    icon: <Brain className="w-6 h-6" />,
+    tags: ['Tikun Olam', 'AI Ethics', 'Pentagon', 'NO_GO', 'BinahSigma'],
+  },
+  {
     id: 'civilizational-bias-ai',
     title: 'The Hidden Bias: Why Your AI Thinks Like a Westerner',
     excerpt: 'How civilizational assumptions embedded in training data create systematic blind spots in AI decision-making, and why comparing Western vs Eastern models reveals 73% divergence on critical ethical questions.',

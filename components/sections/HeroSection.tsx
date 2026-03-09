@@ -13,7 +13,7 @@ export default function HeroSection() {
   })
 
   const metrics = [
-    { number: 500000, suffix: '+', label: 'Calls Processed' },
+    { number: 12000, suffix: '+', label: 'Calls Processed' },
     { number: 23, suffix: '', label: 'Projects 2024' },
     { number: 98, suffix: '%', label: 'Recurring Clients' },
     { number: 7, suffix: ' yrs', label: 'Building Ethical AI' }

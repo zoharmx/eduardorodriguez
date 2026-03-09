@@ -23,37 +23,49 @@ interface Project {
 const projects: Project[] = [
   {
     id: 'tikun-olam',
-    title: 'Tikun Olam - Observable Ethical AI',
-    company: 'Google Cloud x Datadog Winner',
+    title: 'Tikun Olam v2 - Observable Ethical AI',
+    company: 'Finalist — Google Cloud x Datadog Hackathon',
     metric: '73%',
     metricLabel: 'Bias Detected',
-    impact: 'First ethical AI pipeline with full observability in Datadog',
+    impact: '10-Sefirot pipeline with 5 AI providers. NO_GO on Anthropic×Pentagon $2.4B contract.',
     color: 'emerald',
-    tags: ['Python', 'Vertex AI', 'Datadog', 'BinahSigma', 'DeepSeek'],
-    description: 'Detects civilizational biases by comparing Western vs Eastern AI models. Real-time bias monitoring architecture with custom metrics.',
+    tags: ['Python', 'Vertex AI', 'Datadog', 'BinahSigma', 'GPT-4o', 'Grok', 'Mistral'],
+    description: 'v2: 10-Sefirot pipeline comparing 5 AI providers simultaneously. BinahSigma civilizational bias detection + ERI (Ethical Risk Index) on every decision.',
     featured: true,
   },
   {
     id: 'vocalisai',
-    title: 'VocalisAI - Voice Agent with Payments',
-    company: 'Automated Sales',
-    metric: 'Voice-to-Pay',
-    metricLabel: 'Push-to-Link',
-    impact: 'Autonomous phone agent capable of closing sales',
+    title: 'VocalisAI V3 - Multi-Agent Voice Intelligence',
+    company: 'Google Gemini Live Hackathon Finalist',
+    metric: '6+1',
+    metricLabel: 'Agents (Akiva)',
+    impact: 'Akiva meta-agent orchestrating 6 specialists with TOF ethical layer on every call',
     color: 'purple',
-    tags: ['ElevenLabs', 'Twilio', 'Stripe API', 'FastAPI'],
-    description: 'Integrates ElevenLabs for natural conversation and Stripe for real-time "Push-to-Link" payment generation during calls.',
+    tags: ['Gemini Live API', 'ElevenLabs', 'Twilio', 'Stripe', 'TOF Layer'],
+    description: 'Akiva meta-agent supervises Alex, Nova, Diana, Marco, Sara & Raul. Every interaction evaluated through 5 Sefirotic ethical dimensions in real time.',
+    featured: true,
   },
   {
     id: 'hoymismo-gps',
-    title: 'HoyMismoGPS - IoT Infrastructure',
+    title: 'HoyMismoGPS V2 - Enterprise Fleet Management',
     company: 'Enterprise Logistics',
     metric: '500+',
     metricLabel: 'Assets Monitored',
-    impact: 'High-concurrency tracking system with sub-second latency',
+    impact: 'Google Cloud architecture: Cloud Run, BigQuery, Firestore, Pub/Sub for enterprise fleet',
     color: 'cyan',
-    tags: ['Python Asyncio', 'TCP/IP', 'Redis', 'Mapbox GL'],
-    description: 'Processes TCP/IP binary protocols for real-time monitoring of massive fleets with high-availability architecture.',
+    tags: ['Cloud Run', 'BigQuery', 'Firestore', 'Pub/Sub', 'Python Asyncio'],
+    description: 'V2: Full Google Cloud architecture. Cloud Run for APIs, BigQuery for analytics, Firestore for real-time state, Pub/Sub for event streaming. Enterprise fleet management.',
+  },
+  {
+    id: 'hoymismo-dashboard',
+    title: 'HoyMismo Dashboard Agencia',
+    company: 'HoyMismo Platform',
+    metric: 'All-in-One',
+    metricLabel: 'OS Agencias',
+    impact: 'Sistema operativo para agencias aduanales e importación vehicular',
+    color: 'cyan',
+    tags: ['Next.js 14', 'Firebase', 'Google Cloud', 'Tailwind'],
+    description: 'Sistema operativo completo para agencias aduanales e importación vehicular: CRM, gestión de expedientes, tracking de importaciones, facturación y BI.',
   },
   {
     id: 'signaflow',
@@ -124,7 +136,7 @@ export default function ProjectsShowcase() {
   return (
     <StorySection
       id="projects"
-      chapter={3}
+      chapter={4}
       icon={<Rocket className="w-8 h-8" />}
       color="purple"
       title="Then I applied it to real problems"

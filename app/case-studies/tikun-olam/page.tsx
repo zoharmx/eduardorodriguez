@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { ArrowLeft, ExternalLink, Github, TrendingUp, Eye, Brain, Shield, Download, Play, Clock, Target, Zap, FileJson, FileText, Image as ImageIcon } from 'lucide-react'
+import { ArrowLeft, ExternalLink, Github, TrendingUp, Eye, Brain, Shield, Download, Play, Clock, Target, Zap, FileText, Image as ImageIcon } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Navigation from '@/components/Navigation'
@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Tikun Olam - Observable Ethical AI | Case Study',
-  description: 'The first ethical AI pipeline with full observability in Datadog. Winner of Google Cloud x Datadog Hackathon.',
+  description: 'The first ethical AI pipeline with full observability in Datadog. Finalist at Google Cloud x Datadog Hackathon.',
 }
 
 export default function TikunOlamCaseStudy() {
@@ -15,7 +15,7 @@ export default function TikunOlamCaseStudy() {
     { icon: <Eye className="w-6 h-6" />, value: '73%', label: 'Bias Delta Detected' },
     { icon: <Brain className="w-6 h-6" />, value: '14', label: 'Blind Spots Found' },
     { icon: <Clock className="w-6 h-6" />, value: '8.8min', label: 'Analysis Time' },
-    { icon: <TrendingUp className="w-6 h-6" />, value: 'Winner', label: 'Google Cloud x Datadog' },
+    { icon: <TrendingUp className="w-6 h-6" />, value: 'Finalist', label: 'Google Cloud x Datadog' },
   ]
 
   const sefirotPipeline = [
@@ -52,7 +52,7 @@ export default function TikunOlamCaseStudy() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
             </span>
-            Google Cloud x Datadog Hackathon Winner
+            Finalist — Google Cloud x Datadog Hackathon
           </div>
 
           {/* Header */}
@@ -102,27 +102,19 @@ export default function TikunOlamCaseStudy() {
             <div className="mt-8 p-6 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border-2 border-emerald-500/50 rounded-xl">
               <div className="flex items-center gap-3 mb-4">
                 <Download className="w-6 h-6 text-emerald-400" />
-                <h3 className="text-xl font-bold text-white">Download Analysis Results</h3>
+                <h3 className="text-xl font-bold text-white">Download Official Report PDF</h3>
               </div>
               <p className="text-slate-300 text-sm mb-4">
-                Get the complete ethical analysis output from our Nvidia-Groq $20B acquisition case study.
+                The complete OpenAI × Sam Altman ethical analysis — Anthropic vs Pentagon $2.4B contract case with NO_GO recommendation.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="/downloads/tikun_nvidia_groq_analysis.json"
+                  href="/downloads/tikun-olam-report.pdf"
                   download
                   className="inline-flex items-center gap-3 px-6 py-3 bg-emerald-500/20 border-2 border-emerald-500/50 rounded-lg hover:bg-emerald-500/30 hover:border-emerald-400 transition-all text-emerald-400 font-semibold"
                 >
-                  <FileJson className="w-5 h-5" />
-                  Download Full JSON (136KB)
-                </a>
-                <a
-                  href="/downloads/tikun_nvidia_groq_summary.txt"
-                  download
-                  className="inline-flex items-center gap-3 px-6 py-3 bg-cyan-500/20 border-2 border-cyan-500/50 rounded-lg hover:bg-cyan-500/30 hover:border-cyan-400 transition-all text-cyan-400 font-semibold"
-                >
                   <FileText className="w-5 h-5" />
-                  Download Summary (TXT)
+                  Download Official Report PDF
                 </a>
               </div>
             </div>
@@ -248,6 +240,39 @@ export default function TikunOlamCaseStudy() {
                   <p className="text-xs text-purple-400 font-mono">Decision Output</p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* TOF v2 Gallery */}
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <ImageIcon className="w-6 h-6 text-emerald-400" />
+              <h3 className="text-2xl font-bold text-white">TOF v2 — Anthropic × Pentagon Analysis</h3>
+            </div>
+            <p className="text-slate-400 text-sm mb-6">
+              The OpenAI × Sam Altman report documents TOF v2&apos;s analysis of the Anthropic vs Pentagon $2.4B contract.
+              The 10-Sefirot pipeline returned a NO_GO recommendation — AI should not be used for autonomous weapons systems.
+            </p>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { src: '/images/tikun/cap2-1.png', alt: 'TOF v2 pipeline overview', caption: 'TOF v2 Pipeline' },
+                { src: '/images/tikun/cap2-2.png', alt: 'BinahSigma analysis', caption: 'BinahSigma Analysis' },
+                { src: '/images/tikun/cap2-3.png', alt: 'ERI scoring dashboard', caption: 'ERI Dashboard' },
+                { src: '/images/tikun/cap2-4.png', alt: 'NO_GO recommendation output', caption: 'NO_GO Decision Output' },
+              ].map((img, i) => (
+                <div key={i} className="rounded-xl overflow-hidden border border-emerald-500/30 bg-slate-900">
+                  <div className="p-3 bg-slate-800/50">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                  <div className="p-3 border-t border-emerald-500/20">
+                    <p className="text-xs text-emerald-400 font-mono">{img.caption}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -575,24 +600,16 @@ Output: Ethical Decision + Audit Trail`}
               <div className="p-6 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border-2 border-dashed border-emerald-500/50 rounded-xl">
                 <div className="flex items-center gap-3 mb-4">
                   <Download className="w-6 h-6 text-emerald-400" />
-                  <span className="text-lg font-semibold text-white">Download Complete Analysis</span>
+                  <span className="text-lg font-semibold text-white">Download Official Report PDF</span>
                 </div>
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="/downloads/tikun_nvidia_groq_analysis.json"
+                    href="/downloads/tikun-olam-report.pdf"
                     download
                     className="inline-flex items-center gap-3 px-5 py-3 bg-emerald-500/20 border-2 border-emerald-500/50 rounded-lg hover:bg-emerald-500/30 transition-all text-emerald-400 font-medium"
                   >
-                    <FileJson className="w-5 h-5" />
-                    Full JSON Analysis (136KB)
-                  </a>
-                  <a
-                    href="/downloads/tikun_nvidia_groq_summary.txt"
-                    download
-                    className="inline-flex items-center gap-3 px-5 py-3 bg-cyan-500/20 border-2 border-cyan-500/50 rounded-lg hover:bg-cyan-500/30 transition-all text-cyan-400 font-medium"
-                  >
                     <FileText className="w-5 h-5" />
-                    Executive Summary (TXT)
+                    Download Official Report PDF
                   </a>
                 </div>
               </div>

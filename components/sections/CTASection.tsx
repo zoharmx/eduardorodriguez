@@ -61,12 +61,12 @@ export default function CTASection() {
           </Link>
 
           <a
-            href="/downloads/tikun_nvidia_groq_summary.txt"
+            href="/downloads/tikun-olam-report.pdf"
             download
             className="btn-secondary justify-center"
           >
             <FileText className="w-5 h-5" />
-            Download Case Study
+            Download Case Study (PDF)
           </a>
         </motion.div>
 
@@ -119,7 +119,7 @@ export default function CTASection() {
           className="text-slate-400 text-sm mt-12"
         >
           Also available on:{' '}
-          <a href="https://linkedin.com/in/eduardo-rodriguez-dev" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:underline">
+          <a href="https://www.linkedin.com/in/eduardo-rodríguez-b364b720b" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:underline">
             LinkedIn
           </a>
           {' • '}
