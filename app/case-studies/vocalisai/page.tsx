@@ -119,7 +119,27 @@ export default function VocalisAICaseStudy() {
                 className="rounded-xl"
               />
             </div>
-            <p className="text-sm text-slate-400 mt-3 text-center">VocalisAI V3 — Multi-Agent architecture demonstration</p>
+            <p className="text-sm text-slate-400 mt-3 text-center">VocalisAI V3 — Google Gemini Live Hackathon submission</p>
+          </div>
+
+          {/* Second Video */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-display font-bold text-white mb-6">
+              VocalisAI in a Real Call — Live Demo
+            </h2>
+            <div className="rounded-xl overflow-hidden border border-accent-purple/30 shadow-lg shadow-accent-purple/10">
+              <iframe
+                width="100%"
+                height="400"
+                src="https://www.youtube.com/embed/mtZ3mxJlQgk"
+                title="VocalisAI — Real Call Live Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="rounded-xl"
+              />
+            </div>
+            <p className="text-sm text-slate-400 mt-3 text-center">Watch a real conversation — VocalisAI handling an actual call from start to finish</p>
           </div>
 
           {/* The Story */}

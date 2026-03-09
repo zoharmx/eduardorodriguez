@@ -70,6 +70,30 @@ export default function ContactPage() {
             </p>
           </motion.div>
 
+          {/* Video — Social Proof */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="mb-12"
+          >
+            <p className="text-center text-slate-400 text-sm mb-4 uppercase tracking-widest">See the technology in action</p>
+            <div className="rounded-2xl overflow-hidden border border-primary-500/30 shadow-lg shadow-primary-500/10">
+              <iframe
+                width="100%"
+                height="420"
+                src="https://www.youtube.com/embed/-O_pdUdvNfw"
+                title="Eduardo Rodriguez — AI & Voice Agent Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <p className="text-center text-slate-500 text-xs mt-3">
+              Real AI systems, live demos — what we can build together
+            </p>
+          </motion.div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {/* Contact Info */}
             <motion.div
